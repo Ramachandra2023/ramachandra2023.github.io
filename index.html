@@ -12,7 +12,8 @@
 header{position:sticky;top:0;z-index:100;background:rgba(7,31,73,.96);backdrop-filter:blur(16px);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);box-shadow:0 8px 24px rgba(3,18,45,.12)}
 .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;flex-direction:column;line-height:1.05}.brand strong{font-size:17px;letter-spacing:.025em}.brand span{font-size:10px;color:#b8c9e2;margin-top:7px;letter-spacing:.13em;text-transform:uppercase}nav{display:flex;align-items:center;gap:19px;font-size:12px;color:#dbe6f4}nav a:hover{color:#fff}.nav-cta{background:#fff;color:var(--navy);padding:11px 16px;border-radius:999px;font-weight:850;white-space:nowrap}.menu{display:none;border:0;background:transparent;color:#fff;font-size:28px}
 /* HERO */
-.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr);min-height:560px;background:linear-gradient(135deg,#fff 0%,#fbfdff 66%,#f0f6ff 100%);border-bottom:1px solid #e7eef7}.hero-copy{display:flex;align-items:center;min-width:0}.hero-inner{width:100%;padding:62px 44px 62px max(28px,calc((100vw - var(--max))/2 + 28px));max-width:920px}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:900;letter-spacing:.15em;color:var(--blue);text-transform:uppercase;margin-bottom:14px}.eyebrow:before{content:"";width:24px;height:2px;background:var(--blue);border-radius:4px}.hero h1{font-size:clamp(43px,4vw,61px);line-height:1.01;letter-spacing:-.052em;margin:0 0 17px;color:var(--navy);max-width:800px}.hero p{font-size:16px;line-height:1.55;color:var(--muted);max-width:720px;margin:0 0 21px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:11px;font-weight:850;font-size:13px;border:1px solid transparent;transition:.2s}.btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px rgba(23,105,216,.23)}.btn-primary:hover{transform:translateY(-2px);background:var(--blue2)}.btn-secondary{border-color:#cbd8e9;color:var(--navy);background:#fff}.btn-secondary:hover{border-color:var(--blue);color:var(--blue)}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(360px,.65fr);min-height:560px;background:linear-gradient(135deg,#fff 0%,#fbfdff 66%,#f0f6ff 100%);border-bottom:1px solid #e7eef7}.hero-copy{display:flex;align-items:center;min-width:0}.hero-inner{width:100%;padding:62px 44px 62px max(28px,calc((100vw - var(--max))/2 + 28px));max-width:920px}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:900;letter-spacing:.15em;color:var(--blue);text-transform:uppercase;margin-bottom:14px}.eyebrow:before{content:"";width:24px;height:2px;background:var(--blue);border-radius:4px}.hero h1{font-size:clamp(43px,4vw,61px);line-height:1.01;letter-spacing:-.052em;margin:0 0 17px;color:var(--navy);max-width:800px}.hero p{font-size:16px;line-height:1.55;color:var(--muted);max-width:720px;margin:0 0 21px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:11px;font-weight:850;font-size:13px;border:1px solid transparent;transition:.2s}.btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 30px rgba(23,105,216,.23)}.btn-primary:hover{transform:translateY(-2px);background:var(--blue2)}.btn-secondary{border-color:#cbd8e9;color:var(--navy);background:#fff}.btn-secondary:hover{border-color:var(--blue);color:var(--blue)}.btn-disabled{opacity:.58;cursor:not-allowed;user-select:none}.btn-disabled:hover{transform:none;border-color:#cbd8e9;color:var(--navy)}
+.who-help{background:#f8fbff}.who-grid{grid-template-columns:repeat(4,1fr)}
 .hero-proof{display:flex;flex-wrap:wrap;gap:7px 18px;margin-top:25px;color:#516681;font-size:11px;font-weight:750}.hero-proof span{display:inline-flex;align-items:center;gap:7px}.hero-proof i{width:5px;height:5px;border-radius:50%;background:var(--blue);display:inline-block}
 .hero-photo{position:relative;z-index:1;align-self:stretch;min-height:560px;margin:28px 28px 28px 0;border-radius:24px;overflow:hidden;background:#081d3e;box-shadow:0 22px 55px rgba(5,27,61,.18)}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block;filter:saturate(.93) contrast(1.02)}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,31,73,.38),rgba(7,31,73,.05) 55%,rgba(2,16,37,.38)),linear-gradient(0deg,rgba(2,15,35,.6),transparent 35%);pointer-events:none}.grid-overlay{position:absolute;inset:0;opacity:.15;background-image:linear-gradient(rgba(69,167,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(69,167,255,.5) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,transparent,black 35%,black 100%);z-index:2}.hero-card{position:absolute;left:18px;right:18px;bottom:18px;z-index:4;background:rgba(7,31,73,.88);border:1px solid rgba(255,255,255,.2);color:#fff;padding:14px 16px;border-radius:14px;box-shadow:0 18px 45px rgba(0,0,0,.25)}.hero-card strong{display:block;font-size:14px}.hero-card span{display:block;color:#bdd0e9;font-size:11px;margin-top:4px}.hero-label{position:absolute;top:18px;right:18px;z-index:4;background:rgba(255,255,255,.92);color:var(--navy);padding:8px 11px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 /* METRICS */
@@ -36,6 +37,7 @@ section{padding:78px 0}.section-kicker{font-size:10px;font-weight:900;letter-spa
 .testimonials{background:#fff}.quote{border-left:4px solid var(--blue);padding:10px 0 10px 24px;color:var(--muted);font-size:16px;max-width:860px}.quote small{display:block;margin-top:10px;color:var(--navy);font-weight:800;font-size:11px}
 /* CTA */
 .cta{background:linear-gradient(135deg,#071f49,#0c3978);color:#fff;padding:72px 0}.cta-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}.cta .section-title{color:#fff}.cta p{color:#bfd0e7;max-width:680px;font-size:15px;margin:0}.cta-actions{display:flex;flex-direction:column;gap:10px;align-items:stretch;min-width:245px}.cta-actions .btn{text-align:center}.social{display:flex;gap:18px;margin-top:17px;flex-wrap:wrap}.social a{color:#dbe8f8;font-weight:700;font-size:13px}.social a:hover{color:#fff}
+.metrics-note{margin:18px 0 0;color:#bfd0e7;font-size:10px;text-align:center;opacity:.9}.who-grid .card{height:100%}
 footer{background:#041633;color:#aabbd1;padding:28px 0;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}.footer-row strong{color:#fff}
 @media(max-width:980px){nav{gap:12px}.hero{grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr)}.hero-photo{margin:22px 22px 22px 0;min-height:500px}.hero-inner{padding-right:30px}.hero h1{font-size:clamp(40px,5vw,53px)}.leverage-grid,.approach-grid,.tech-wrap,.perspective-grid{grid-template-columns:1fr;gap:34px}.cards,.engage .cards{grid-template-columns:repeat(2,1fr)}.cta-grid{grid-template-columns:1fr}.cta-actions{flex-direction:row;justify-content:flex-start}.cta-actions .btn{width:auto}}
 @media(max-width:720px){.nav{height:70px}.brand strong{font-size:15px}.brand span{font-size:8px}nav{display:none;position:absolute;left:0;right:0;top:70px;background:var(--navy);padding:14px 22px 20px;flex-direction:column;align-items:stretch;box-shadow:0 14px 30px rgba(0,0,0,.18)}nav.open{display:flex}nav a{padding:9px 0}.nav-cta{text-align:center}.menu{display:block}.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{order:1}.hero-inner{padding:48px 20px 38px}.hero h1{font-size:43px}.hero p{font-size:15px}.hero-photo{order:2;height:390px;min-height:390px;margin:0 20px 20px;border-radius:20px}.hero-card{left:14px;right:14px;bottom:14px}.hero-label{top:14px;right:14px}.hero-proof{gap:7px 12px}.metric-grid{grid-template-columns:1fr 1fr}.metric{padding:23px 8px;border-bottom:1px solid rgba(255,255,255,.18)}.metric:nth-child(2),.metric:nth-child(4){border-right:0}.metric b{font-size:29px}.metric span{font-size:9px}.cards,.engage .cards,.steps,.leverage-list{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}section{padding:60px 0}.wrap{padding:0 20px}.section-title{font-size:34px}.actions{flex-direction:column}.actions .btn{width:100%}.cta-actions{flex-direction:column}.cta-actions .btn{width:100%}.footer-row{flex-direction:column}}
@@ -106,9 +108,145 @@ section{padding:94px 0}
 footer{padding:25px 0}
 /* restrained reveal */
 @media (prefers-reduced-motion:no-preference){.hero-copy,.hero-photo,.metric,.card,.case,.step,.belief{animation:rise .55s ease both}.hero-photo{animation-delay:.06s}.metric:nth-child(2){animation-delay:.04s}.metric:nth-child(3){animation-delay:.08s}.metric:nth-child(4){animation-delay:.12s}.card:nth-child(2),.case:nth-child(2),.step:nth-child(2){animation-delay:.04s}.card:nth-child(3),.case:nth-child(3),.step:nth-child(3){animation-delay:.08s}@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}
+/* Larger section headers — keep the existing blue treatment */
+.section-kicker{font-size:13px;letter-spacing:.14em;margin-bottom:11px}
+.eyebrow{font-size:13px;letter-spacing:.14em}
+@media(max-width:720px){.section-kicker{font-size:12px;letter-spacing:.13em}.eyebrow{font-size:11px;letter-spacing:.13em}}
 /* Mobile premium rhythm */
 @media(max-width:980px){section{padding:78px 0}.hero{grid-template-columns:minmax(0,1.22fr) minmax(330px,.78fr)}.hero-inner{padding-right:28px}.hero-photo{margin-right:22px}.leverage-grid,.approach-grid,.tech-wrap,.perspective-grid{gap:42px}.cards{gap:0 14px}.case-grid{gap:1px}.cta-grid{gap:32px}}
 @media(max-width:720px){.wrap{padding-left:20px;padding-right:20px}.nav{height:68px}.brand strong{font-size:15px}.brand span{font-size:8px}.hero-inner{padding:42px 20px 34px}.hero h1{font-size:42px;line-height:1.0}.hero p{font-size:14.5px}.hero-photo{height:360px;min-height:360px;margin:0 20px 20px;border-radius:18px}.hero-proof{margin-top:18px}.metric{padding:25px 8px}.metric b{font-size:28px}.metric span{font-size:8.5px}.leverage,.proof,.cases,.approach,.engage,.tech-section,.testimonials{padding-top:68px;padding-bottom:72px}.leverage-list{margin-top:20px}.leverage-card,.step{padding:17px 0}.belief{padding:28px 24px;min-height:0}.belief h3{font-size:25px}.cards,.engage .cards,.steps,.leverage-list,.case-grid{grid-template-columns:1fr}.cards .card:nth-child(n+4){border-top:1px solid var(--line)}.case-grid{background:transparent;border:0;gap:12px;overflow:visible}.case{border:1px solid rgba(255,255,255,.13);border-radius:14px}.section-title{font-size:32px}.perspective-inner{padding:60px 0}.perspective-grid{gap:25px}.perspective blockquote{font-size:30px}.cta{padding:66px 0}.cta-actions{min-width:0}.footer-row{gap:12px}}
+
+@media(max-width:980px){.who-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.who-grid{grid-template-columns:1fr}}
+
+/* ===== Visual polish pass ===== */
+:root{
+  --shadow-soft:0 12px 34px rgba(10,42,82,.055);
+  --shadow-hover:0 20px 48px rgba(10,42,82,.11);
+}
+body{letter-spacing:-.005em}
+section{position:relative}
+section:not(.cases):not(.cta):not(.metrics)::after{
+  content:"";position:absolute;left:50%;bottom:0;width:min(1180px,calc(100% - 56px));
+  height:1px;background:linear-gradient(90deg,transparent,#e7eef7 15%,#e7eef7 85%,transparent);
+  transform:translateX(-50%);
+}
+.section-kicker{font-size:11px}
+.section-title{font-weight:820}
+.section-head{margin-bottom:4px}
+
+/* Hero */
+.hero{min-height:590px}
+.hero-inner{padding-top:72px;padding-bottom:72px}
+.hero h1{max-width:820px}
+.hero p{font-size:17px;max-width:700px}
+.hero-proof{margin-top:27px}
+.hero-photo{margin-top:32px;margin-bottom:32px}
+.hero-photo:before{
+  content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  border:1px solid rgba(255,255,255,.14);border-radius:24px;
+}
+.hero-card{backdrop-filter:blur(10px)}
+.hero-card strong{font-size:15px}
+.hero-card span{font-size:11.5px}
+
+/* Metrics */
+.metric{padding:30px 16px}
+.metric b{font-size:38px}
+.metric span{font-size:10px;font-weight:700}
+
+/* Section rhythm */
+.leverage,.proof,.cases,.approach,.engage,.tech-section,.testimonials{scroll-margin-top:82px}
+.leverage-grid{gap:58px}
+.leverage-list{gap:14px}
+.leverage-card,.card,.step{box-shadow:var(--shadow-soft)}
+.leverage-card:hover,.card:hover,.step:hover{box-shadow:var(--shadow-hover)}
+
+/* Who I Help */
+.who-help{background:linear-gradient(180deg,#f8fbff 0%,#f4f8fd 100%)}
+.who-grid{gap:16px}
+.who-grid .card{padding:24px}
+.who-grid .card h3{font-size:18px}
+
+/* Expertise */
+.proof .cards{gap:16px}
+.proof .card{min-height:178px}
+
+/* Case studies */
+.cases{background:linear-gradient(135deg,#071f49 0%,#0b2d5f 100%)}
+.case-grid{gap:18px}
+.case{padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.095),rgba(255,255,255,.035))}
+.case h3{font-size:23px}
+.case p{font-size:13.5px;line-height:1.65}
+.case .result span{padding:6px 9px}
+.case .impact{font-size:13.5px}
+.metrics-note{margin-top:22px}
+
+/* Approach */
+.step{transition:transform .2s,box-shadow .2s,border-color .2s}
+.step:hover{transform:translateY(-3px);border-color:#c7d8ec}
+
+/* Engagements */
+.engage .card{min-height:205px}
+.engage .card strong{font-size:11px}
+
+/* Technical depth */
+.tech-section{padding-top:92px;padding-bottom:98px}
+.tech{gap:9px}
+.pill{padding:8px 12px;transition:.18s}
+.pill:hover{border-color:#b8cde8;color:var(--blue);transform:translateY(-1px)}
+.tech-note{box-shadow:var(--shadow-soft)}
+
+/* Perspective */
+.perspective-inner{box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+
+/* Testimonials placeholder */
+.testimonials .quote{background:#f8fbff;border:1px solid var(--line);border-left:3px solid var(--blue);
+  border-radius:0 14px 14px 0;padding:18px 22px;max-width:900px}
+
+/* CTA */
+.cta{position:relative;overflow:hidden}
+.cta:before{
+  content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(121,188,255,.12);
+  border-radius:50%;right:-170px;top:-190px;
+}
+.cta-grid{position:relative;z-index:1}
+.cta .section-title{max-width:760px}
+.cta p{max-width:720px}
+
+/* Disabled resume */
+.btn-disabled{pointer-events:none}
+
+/* Focus accessibility */
+a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px;border-radius:8px}
+
+@media(max-width:980px){
+  .hero{min-height:560px}
+  .hero-inner{padding-top:60px;padding-bottom:60px}
+  .hero-photo{margin-top:24px;margin-bottom:24px}
+}
+@media(max-width:720px){
+  section:not(.cases):not(.cta):not(.metrics)::after{width:calc(100% - 40px)}
+  .hero-inner{padding-top:48px;padding-bottom:40px}
+  .hero p{font-size:15px}
+  .hero-photo{margin-top:0;margin-bottom:20px}
+  .metric{padding:26px 8px}
+  .metric b{font-size:30px}
+  .who-grid .card,.proof .card{min-height:0}
+  .case{padding:23px}
+  .case h3{font-size:21px}
+  .engage .card{min-height:0}
+  .tech-section{padding-top:72px;padding-bottom:80px}
+}
+
+
+.focus-strip{
+  display:flex;align-items:center;flex-wrap:wrap;gap:7px 10px;margin:0 0 2px;
+  color:#61738b;font-size:10.5px;letter-spacing:.01em;
+}
+.focus-strip span{font-weight:800;text-transform:uppercase;letter-spacing:.11em;color:#71839b}
+.focus-strip b{font-weight:800;color:#31557e}
+.focus-strip i{width:4px;height:4px;border-radius:50%;background:#8ebcf0;display:inline-block}
+@media(max-width:720px){.focus-strip{font-size:10px;gap:6px 8px}.focus-strip span{width:100%;margin-bottom:1px}}
 
 </style>
 </head>
@@ -118,7 +256,7 @@ footer{padding:25px 0}
   <a class="brand" href="#home"><strong>RAMACHANDRA RAJU S</strong><span>Fractional CTO · Enterprise Engineering Leader</span></a>
   <button class="menu" aria-label="Open navigation">☰</button>
   <nav>
-   <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#engagements">Engagements</a><a href="#cases">Case Studies</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+   <a href="#who-i-help">Who I Help</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#engagements">Engagements</a><a href="#cases">Case Studies</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
    <a class="nav-cta" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a Conversation</a>
   </nav>
  </div>
@@ -127,14 +265,26 @@ footer{padding:25px 0}
 <section class="hero">
  <div class="hero-copy"><div class="hero-inner">
   <div class="eyebrow">Enterprise Engineering Leadership</div>
-  <h1>Scaling technology, teams and execution through engineering leadership.</h1>
-  <p>I partner with organizations to strengthen engineering leadership, modernize technology platforms, build high-performing teams and turn complex technology challenges into measurable business outcomes.</p>
-  <div class="actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><a class="btn btn-secondary" href="Ramachandra_Raju_Executive_Profile.pdf">Download Executive Profile</a></div>
-  <div class="hero-proof"><span><i></i>Fractional CTO</span><span><i></i>Engineering Leadership</span><span><i></i>Technology & AI Advisor</span></div>
+  <h1>Fractional CTO for scaling engineering, modernizing technology and building production-ready AI.</h1>
+  <p>I help organizations turn technology strategy into measurable business outcomes — scaling engineering, modernizing platforms, building high-performing teams and taking practical AI / GenAI initiatives from ideas to production.</p>
+  <div class="actions"><a class="btn btn-primary" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><span class="btn btn-secondary btn-disabled" aria-disabled="true" tabindex="-1" title="Executive profile download is currently unavailable">Download Executive Profile</span></div>
+  
+<div class="focus-strip" aria-label="Current focus">
+  <span>Currently focused on</span>
+  <b>AI Engineering</b><i></i><b>Enterprise RAG</b><i></i><b>Agentic Systems</b><i></i><b>Platform Modernization</b>
+</div>
+<div class="hero-proof"><span><i></i>Fractional CTO</span><span><i></i>Engineering Leadership</span><span><i></i>Technology & AI Advisor</span></div>
  </div></div>
  <div class="hero-photo"><img src="ramachandra-hero.jpg" alt="Ramachandra Raju S"><div class="grid-overlay"></div><div class="hero-label">Fractional CTO · Advisor</div><div class="hero-card"><strong>Enterprise Engineering Leadership</strong><span>Strategy · Architecture · Engineering · AI / GenAI</span></div></div>
 </section>
-<section class="metrics"><div class="wrap metric-grid"><div class="metric"><b>18+</b><span>Years of Technology Leadership</span></div><div class="metric"><b>16</b><span>Engineers Led</span></div><div class="metric"><b>20M+</b><span>Daily Data Points</span></div><div class="metric"><b>100+</b><span>E-commerce Platforms</span></div></div></section>
+<section class="metrics"><div class="wrap metric-grid"><div class="metric"><b>18+</b><span>Years of Technology Leadership</span></div><div class="metric"><b>100+</b><span>Engineers Mentored &amp; Helped Progress</span></div><div class="metric"><b>20M+</b><span>Daily Data Points Processed</span></div><div class="metric"><b>100+</b><span>E-commerce Platforms Supported</span></div></div></section>
+
+<section id="who-i-help" class="who-help"><div class="wrap"><div class="section-head"><div class="section-kicker">Who I Help</div><h2 class="section-title">Senior technology leadership for moments that matter.</h2><p class="section-intro">I work with organizations that need experienced technology leadership to scale, modernize, improve execution or turn AI opportunities into durable business capabilities.</p></div><div class="cards who-grid">
+<article class="card"><div class="icon">01</div><h3>Startups & Scale-ups</h3><p>Bring engineering structure, architecture discipline and technical leadership as the organization grows beyond the founding team.</p></article>
+<article class="card"><div class="icon">02</div><h3>Mid-Market Organizations</h3><p>Modernize legacy platforms, strengthen engineering operations and connect technology investment to business priorities.</p></article>
+<article class="card"><div class="icon">03</div><h3>Enterprises & Transformation Teams</h3><p>Lead complex platform, data and AI initiatives with the architecture, governance and execution discipline required at scale.</p></article>
+<article class="card"><div class="icon">04</div><h3>Organizations Exploring AI</h3><p>Move beyond experiments with practical GenAI strategy, production architecture, reusable capabilities and responsible execution.</p></article>
+</div></div></section>
 
 <section id="about" class="leverage"><div class="wrap leverage-grid"><div><div class="section-kicker">Where I Create Leverage</div><h2 class="section-title">Technology. People. Execution.</h2><p class="section-intro">Senior technology leadership across enterprise architecture, platform engineering, data, cloud and modern AI/GenAI — with a strong focus on building teams and predictable delivery.</p><div class="leverage-list"><article class="leverage-card"><div class="num">01</div><h3>Technology Strategy</h3><p>Align architecture, platforms and engineering investment with business priorities.</p></article><article class="leverage-card"><div class="num">02</div><h3>Engineering Leadership</h3><p>Build high-performing teams, operating models and leadership capability.</p></article><article class="leverage-card"><div class="num">03</div><h3>Modernization & AI</h3><p>Modernize legacy platforms and move practical AI / GenAI opportunities toward production.</p></article><article class="leverage-card"><div class="num">04</div><h3>Execution & Scale</h3><p>Turn complex initiatives into predictable delivery and measurable business outcomes.</p></article></div></div><aside class="belief"><div class="mini">Leadership Philosophy</div><h3>Better technology decisions create better business outcomes.</h3><p>My role is to bring clarity to difficult technology decisions, strengthen the people and operating model around them, and help teams execute with confidence.</p></aside></div></section>
 
@@ -148,11 +298,11 @@ footer{padding:25px 0}
 </div></div></section>
 
 <section id="cases" class="cases"><div class="wrap"><div class="section-head"><div class="section-kicker">Selected Leadership Impact</div><h2 class="section-title">Proof through scale and execution.</h2><p class="section-intro">Selected examples from enterprise data, AI, platform and engineering leadership work.</p></div><div class="case-grid">
-<article class="case"><div class="tag">01 · Commerce Intelligence</div><h3>20M+ daily data points across 100+ e-commerce sites</h3><p>Led 16 Data Engineers, Full-Stack Engineers and Engineering Leads across Data Collection, ETL, Visualization and Data Quality. Built scalable data platforms and commerce intelligence capabilities.</p><div class="result"><span>Scale</span><span>Data Quality</span><span>Reliability</span></div><div class="impact">Impact: stronger data quality, operational reliability and business insight.</div></article>
-<article class="case"><div class="tag">02 · AI Search & Recommendations</div><h3>Engineering leadership for AI-powered product discovery</h3><p>Led a cross-functional organization of 14 Data Scientists, ML Engineers and Platform Engineers covering search relevance, recommendations, product tagging and intelligent product matching.</p><div class="result"><span>ML Engineering</span><span>Search</span><span>Recommendations</span></div><div class="impact">Impact: improved search relevance, recommendation quality and delivery predictability.</div></article>
-<article class="case"><div class="tag">03 · Enterprise GenAI</div><h3>RAG, AI Agents and MCP for enterprise workflows</h3><p>Designed enterprise-grade GenAI applications, knowledge assistants, engineering copilots and intelligent automation using LLMs, vector databases, RAG, AI Agents and MCP.</p><div class="result"><span>LLMs</span><span>RAG</span><span>AI Agents</span></div><div class="impact">Focus: practical AI architecture and reusable cloud-native AI engineering.</div></article>
-<article class="case"><div class="tag">04 · Engineering Organization</div><h3>Building teams, standards and execution systems</h3><p>Led engineering teams across platform, data, full-stack and infrastructure automation; established hiring, mentoring, roadmap planning, code reviews, CI/CD, governance and release practices.</p><div class="result"><span>People</span><span>Delivery</span><span>Operating Model</span></div><div class="impact">Impact: stronger engineering productivity, delivery discipline and operational efficiency.</div></article>
-</div></div></section>
+<article class="case"><div class="tag">01 · Commerce Intelligence</div><h3>20M+ daily data points across 100+ e-commerce sites</h3><p>Led and mentored engineering talent across Data Collection, ETL, Visualization and Data Quality. Built scalable data platforms and commerce intelligence capabilities supporting enterprise-scale operations.</p><div class="result"><span>20M+ daily data points</span><span>100+ commerce platforms</span><span>30% lower infra cost*</span><span>40% faster data workflows*</span></div><div class="impact">Impact: stronger data quality, operational reliability and business insight.</div></article>
+<article class="case"><div class="tag">02 · AI Search & Recommendations</div><h3>Engineering leadership for AI-powered product discovery</h3><p>Led cross-functional Data Science, ML and Platform Engineering teams covering search relevance, recommendations, product tagging and intelligent product matching.</p><div class="result"><span>25% productivity uplift*</span><span>2× release frequency*</span><span>Search relevance</span><span>Recommendations</span></div><div class="impact">Impact: improved search relevance, recommendation quality and delivery predictability.</div></article>
+<article class="case"><div class="tag">03 · Enterprise GenAI</div><h3>RAG, AI Agents and MCP for enterprise workflows</h3><p>Designed enterprise-grade GenAI applications, knowledge assistants, engineering copilots and intelligent automation using LLMs, vector databases, RAG, AI Agents and MCP.</p><div class="result"><span>30% faster time-to-market*</span><span>35% workflow automation*</span><span>LLMs</span><span>RAG</span><span>AI Agents</span></div><div class="impact">Focus: practical AI architecture and reusable cloud-native AI engineering.</div></article>
+<article class="case"><div class="tag">04 · Engineering Organization</div><h3>Building teams, standards and execution systems</h3><p>Mentored and supported engineers and emerging leaders across platform, data, full-stack and infrastructure automation; established hiring, roadmap, CI/CD, governance and release practices.</p><div class="result"><span>100+ engineers mentored</span><span>30% fewer incidents*</span><span>20% faster delivery*</span><span>Operating Model</span></div><div class="impact">Impact: stronger engineering productivity, delivery discipline and operational efficiency.</div></article>
+</div><p class="metrics-note">*Illustrative outcome placeholders added for now — please validate and replace with your actual results before publishing.</p></div></section>
 
 <section id="approach" class="approach"><div class="wrap approach-grid"><div><div class="section-kicker">How I Engage</div><h2 class="section-title">Assess. Shape. Lead. Scale.</h2><p class="section-intro">A pragmatic leadership model for organizations that need senior technology direction and measurable progress without unnecessary complexity.</p></div><div class="steps">
 <div class="step"><div class="step-num">01</div><h3>Assess</h3><p>Understand business priorities, people, architecture, delivery and technology risk.</p></div>
@@ -173,7 +323,7 @@ footer{padding:25px 0}
 
 <section class="testimonials"><div class="wrap"><div class="section-kicker">Testimonials</div><h2 class="section-title">Leadership, validated by people.</h2><div class="quote">Testimonials will be added here from managers, peers, founders or clients once approved for publication.<small>Real recommendations only — no fabricated quotes.</small></div></div></section>
 
-<section id="contact" class="cta"><div class="wrap cta-grid"><div><div class="section-kicker" style="color:#79bcff">Let's Connect</div><h2 class="section-title">Have a complex technology challenge?</h2><p>Whether you're scaling engineering, modernizing platforms, improving execution, or exploring AI opportunities, let's discuss where focused technology leadership can create the most leverage.</p><div class="social"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ramachandrarajus/">LinkedIn ↗</a><a href="mailto:sramachandra2022@gmail.com">Email Ramachandra ↗</a></div></div><div class="cta-actions"><a class="btn btn-primary" style="background:#fff;color:#071f49" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><a class="btn" style="border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.07)" href="Ramachandra_Raju_Executive_Profile.pdf">Download Executive Profile</a></div></div></section>
+<section id="contact" class="cta"><div class="wrap cta-grid"><div><div class="section-kicker" style="color:#79bcff">Let's Connect</div><h2 class="section-title">Have a complex technology challenge?</h2><p>Whether you're scaling engineering, modernizing platforms, improving execution, or exploring AI opportunities, let's discuss where focused technology leadership can create the most leverage.</p><div class="social"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ramachandrarajus/">LinkedIn ↗</a><a href="mailto:sramachandra2022@gmail.com">Email Ramachandra ↗</a></div></div><div class="cta-actions"><a class="btn btn-primary" style="background:#fff;color:#071f49" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><span class="btn btn-disabled" style="border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.07)" aria-disabled="true" tabindex="-1" title="Executive profile download is currently unavailable">Download Executive Profile</span></div></div></section>
 </main>
 <footer><div class="wrap footer-row"><div><strong>Ramachandra Raju S</strong><br>Fractional CTO · Enterprise Engineering Leader</div><div>© 2026 · Global Remote · Based in India</div></div></footer>
 <script>const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));</script>
