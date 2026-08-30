@@ -432,6 +432,59 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   }
 }
 
+
+/* ===== Who I Help: executive positioning polish ===== */
+.who-help .card{
+  padding:26px 25px 25px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.who-help .card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 42px rgba(10,42,82,.09);
+}
+.who-help .card h3{
+  margin-top:7px;
+  margin-bottom:12px;
+  font-size:18px;
+  line-height:1.25;
+}
+.who-help .card strong{
+  display:inline-block;
+  margin-bottom:5px;
+  color:var(--blue);
+  font-size:12.5px;
+  line-height:1.35;
+}
+.who-help .card p{
+  line-height:1.65;
+}
+.who-help .card > span,
+.who-help .card .number,
+.who-help .card .index{
+  font-size:10px;
+  opacity:.55;
+  letter-spacing:.1em;
+}
+@media(max-width:720px){
+  .who-help .card{padding:22px 20px}
+  .who-help .card h3{font-size:17px}
+}
+
+
+/* ===== Who I Help: intentional 3 + 1 desktop layout ===== */
+@media(min-width:981px){
+  .who-help .who-help-card-4{
+    grid-column:1 / -1;
+    width:calc(66.6667% - 10px);
+    justify-self:center;
+  }
+}
+@media(max-width:980px){
+  .who-help .who-help-card-4{
+    width:auto;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -473,11 +526,11 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   </div>
 </section>
 
-<section id="who-i-help" class="who-help"><div class="wrap"><div class="section-head"><div class="section-kicker">Who I Help</div><h2 class="section-title">Senior technology leadership for moments that matter.</h2><p class="section-intro">I work with organizations that need experienced technology leadership to scale, modernize, improve execution or turn AI opportunities into durable business capabilities.</p></div><div class="cards who-grid">
-<article class="card"><div class="icon">01</div><h3>Startups & Scale-ups</h3><p>Bring engineering structure, architecture discipline and technical leadership as the organization grows beyond the founding team.</p></article>
-<article class="card"><div class="icon">02</div><h3>Mid-Market Organizations</h3><p>Modernize legacy platforms, strengthen engineering operations and connect technology investment to business priorities.</p></article>
+<section id="who-i-help" class="who-help"><div class="wrap"><div class="section-head"><div class="section-kicker">Who I Help</div><h2 class="section-title">Senior technology leadership for moments that matter.</h2><p class="section-intro">I help organizations scale engineering, modernize technology, improve execution and turn AI opportunities into durable business capabilities.</p></div><div class="cards who-grid">
+<article class="card"><div class="icon">01</div><h3>Startups & Scale-ups</h3><p><strong>Build the engineering foundation for scale.</strong><br>Establish architecture discipline, engineering practices and technical leadership as the organization grows.</p></article>
+<article class="card"><div class="icon">02</div><h3>Mid-Market Organizations</h3><p><strong>Modernize without losing momentum.</strong><br>Modernize platforms, strengthen engineering practices and improve delivery without disrupting the business.</p></article>
 <article class="card"><div class="icon">03</div><h3>Enterprises & Transformation Teams</h3><p>Lead complex platform, data and AI initiatives with the architecture, governance and execution discipline required at scale.</p></article>
-<article class="card"><div class="icon">04</div><h3>Organizations Exploring AI</h3><p>Move beyond experiments with practical GenAI strategy, production architecture, reusable capabilities and responsible execution.</p></article>
+<article class="card"><div class="who-help-card-4 icon">04</div><h3>Organizations Exploring AI</h3><p><strong>Move AI from experimentation to production.</strong><br>Build production-ready capabilities with the right architecture, governance and engineering foundation.</p></article>
 </div></div></section>
 
 <section id="about" class="leverage"><div class="wrap leverage-grid"><div><div class="section-kicker">Where I Create Leverage</div><h2 class="section-title">Technology. People. Execution.</h2><p class="section-intro">Senior technology leadership across enterprise architecture, platform engineering, data, cloud and modern AI/GenAI — with a strong focus on building teams and predictable delivery.</p><div class="leverage-list"><article class="leverage-card"><div class="num">01</div><h3>Technology Strategy</h3><p>Align architecture, platforms and engineering investment with business priorities.</p></article><article class="leverage-card"><div class="num">02</div><h3>Engineering Leadership</h3><p>Build high-performing teams, operating models and leadership capability.</p></article><article class="leverage-card"><div class="num">03</div><h3>Modernization & AI</h3><p>Modernize legacy platforms and move practical AI / GenAI opportunities toward production.</p></article><article class="leverage-card"><div class="num">04</div><h3>Execution & Scale</h3><p>Turn complex initiatives into predictable delivery and measurable business outcomes.</p></article></div></div><aside class="belief"><div class="mini">Leadership Philosophy</div><h3>Better technology decisions create better business outcomes.</h3><p>My role is to bring clarity to difficult technology decisions, strengthen the people and operating model around them, and help teams execute with confidence.</p></aside></div></section>
