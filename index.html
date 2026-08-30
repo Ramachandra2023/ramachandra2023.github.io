@@ -310,6 +310,128 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   }
 }
 
+
+/* ===== First-screen spacing refinement ===== */
+@media(min-width:981px){
+  .hero{
+    min-height:435px;
+  }
+  .hero-inner{
+    padding-top:8px;
+    padding-bottom:18px;
+  }
+  .hero-photo{
+    min-height:420px;
+    margin-top:4px;
+    margin-bottom:4px;
+  }
+  .hero-proof{
+    margin-top:20px;
+  }
+}
+
+/* ===== Metrics: tighter, more executive treatment ===== */
+.metrics{
+  padding-top:52px !important;
+  padding-bottom:54px !important;
+}
+.metrics-heading{
+  margin-bottom:18px;
+  font-size:11px;
+  letter-spacing:.105em;
+}
+.metric{
+  padding:20px 14px;
+}
+.metric b{
+  font-size:42px;
+}
+.metric span{
+  max-width:180px;
+  margin:7px auto 0;
+  font-size:11px;
+  line-height:1.45;
+  letter-spacing:.01em;
+  font-weight:500;
+  text-transform:none;
+  color:rgba(255,255,255,.78);
+}
+@media(max-width:720px){
+  .metrics{
+    padding-top:42px !important;
+    padding-bottom:44px !important;
+  }
+  .metrics-heading{
+    font-size:10.5px;
+    margin-bottom:15px;
+  }
+  .metric{
+    padding:18px 8px;
+  }
+  .metric b{
+    font-size:34px;
+  }
+  .metric span{
+    font-size:10.5px;
+    max-width:145px;
+  }
+}
+
+
+/* ===== Hero whitespace: final desktop tightening ===== */
+@media(min-width:981px){
+  .hero{
+    min-height:0;
+  }
+  .hero-copy{
+    align-items:flex-start;
+  }
+  .hero-inner{
+    padding-top:38px;
+    padding-bottom:28px;
+  }
+  .hero-photo{
+    min-height:0;
+    height:calc(100% - 40px);
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+}
+@media(min-width:981px) and (max-height:800px){
+  .hero-inner{
+    padding-top:28px;
+    padding-bottom:22px;
+  }
+  .hero-photo{
+    height:calc(100% - 30px);
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+}
+
+
+/* ===== Hero whitespace: additional desktop-only tightening ===== */
+@media(min-width:981px){
+  .hero-inner{
+    padding-top:18px;
+    padding-bottom:16px;
+  }
+  .hero-photo{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+}
+@media(min-width:981px) and (max-height:800px){
+  .hero-inner{
+    padding-top:14px;
+    padding-bottom:12px;
+  }
+  .hero-photo{
+    margin-top:7px;
+    margin-bottom:7px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -339,7 +461,17 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
  </div></div>
  <div class="hero-photo"><img src="ramachandra-hero.jpg" alt="Ramachandra Raju S"><div class="grid-overlay"></div><div class="hero-label">Fractional CTO · Advisor</div><div class="hero-card"><strong>Enterprise Engineering Leadership</strong><span>Strategy · Architecture · Engineering · AI / GenAI</span></div></div>
 </section>
-<section class="metrics"><div class="wrap metric-grid"><div class="metric"><b>18+</b><span>Years of Technology Leadership</span></div><div class="metric"><b>100+</b><span>Engineers Mentored &amp; Helped Progress</span></div><div class="metric"><b>20M+</b><span>Daily Data Points Processed</span></div><div class="metric"><b>100+</b><span>E-commerce Platforms Supported</span></div></div></section>
+<section class="metrics">
+  <div class="wrap">
+    <div class="metrics-heading">Technology Leadership at Scale</div>
+    <div class="metric-grid">
+      <div class="metric"><b>18+</b><span>Years of Technology Leadership</span></div>
+      <div class="metric"><b>100+</b><span>Engineers Mentored &amp; Developed</span></div>
+      <div class="metric"><b>20M+</b><span>Daily Data Points Processed at Scale</span></div>
+      <div class="metric"><b>100+</b><span>Commerce Platforms Supported</span></div>
+    </div>
+  </div>
+</section>
 
 <section id="who-i-help" class="who-help"><div class="wrap"><div class="section-head"><div class="section-kicker">Who I Help</div><h2 class="section-title">Senior technology leadership for moments that matter.</h2><p class="section-intro">I work with organizations that need experienced technology leadership to scale, modernize, improve execution or turn AI opportunities into durable business capabilities.</p></div><div class="cards who-grid">
 <article class="card"><div class="icon">01</div><h3>Startups & Scale-ups</h3><p>Bring engineering structure, architecture discipline and technical leadership as the organization grows beyond the founding team.</p></article>
