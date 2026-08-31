@@ -485,8 +485,257 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   }
 }
 
+
+/* ===== Where I Create Leverage: executive leverage-point preview ===== */
+.leverage-grid{
+  align-items:stretch;
+}
+.leverage-list{
+  grid-template-columns:1fr;
+  gap:0;
+  margin-top:24px;
+}
+.leverage-card{
+  display:grid;
+  grid-template-columns:38px minmax(170px,.72fr) minmax(0,1.28fr);
+  align-items:start;
+  column-gap:16px;
+  padding:19px 0;
+  background:transparent;
+  border:0;
+  border-top:1px solid var(--line);
+  border-radius:0;
+  box-shadow:none;
+}
+.leverage-card:first-child{
+  border-top:0;
+  padding-top:6px;
+}
+.leverage-card:hover{
+  transform:none;
+  box-shadow:none;
+}
+.leverage-card .num{
+  padding-top:3px;
+}
+.leverage-card h3{
+  margin:0;
+  font-size:18px;
+  line-height:1.3;
+}
+.leverage-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+.leverage-card p strong{
+  display:block;
+  color:var(--blue);
+  font-size:12.5px;
+  line-height:1.4;
+  margin-bottom:3px;
+}
+.belief{
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:300px;
+}
+.belief .mini{
+  letter-spacing:.15em;
+}
+.belief h3{
+  max-width:480px;
+}
+@media(max-width:980px){
+  .leverage-list{gap:0}
+  .leverage-card{
+    grid-template-columns:34px 1fr;
+    column-gap:14px;
+  }
+  .leverage-card p{
+    grid-column:2;
+    margin-top:7px;
+  }
+}
+@media(max-width:720px){
+  .leverage-card{
+    grid-template-columns:30px 1fr;
+    padding:17px 0;
+  }
+  .leverage-card h3{font-size:17px}
+  .belief{min-height:0}
+}
+
 </style>
-</head>
+
+<style>
+/* Expertise-only preview */
+.expertise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:34px}
+.expertise-card{padding:25px 26px 24px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 8px 26px rgba(10,42,82,.045);transition:transform .2s ease,box-shadow .2s ease}
+.expertise-card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(10,42,82,.08)}
+.expertise-num{display:block;margin-bottom:9px;color:var(--blue);font-size:10px;font-weight:900;letter-spacing:.12em}
+.expertise-card h3{margin:0 0 9px;color:var(--navy);font-size:18px;line-height:1.3}
+.expertise-card strong{display:block;margin-bottom:8px;color:var(--blue);font-size:12.5px;line-height:1.45}
+.expertise-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+@media(max-width:720px){
+  .expertise-grid{grid-template-columns:1fr;gap:13px}
+  .expertise-card{padding:21px 20px}
+  .expertise-card h3{font-size:17px}
+}
+</style>
+<style>
+/* Selected Leadership Impact — preview only */
+.impact .section-head{max-width:820px;margin-bottom:34px}
+.impact-list{display:grid;gap:18px}
+.impact-card{padding:27px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(10,42,82,.045)}
+.impact-label{margin-bottom:8px;color:var(--blue);font-size:10px;font-weight:900;letter-spacing:.13em}
+.impact-card h3{margin:0;color:var(--navy);font-size:21px;line-height:1.35}
+.impact-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,1.05fr);gap:38px;margin-top:23px;padding-top:21px;border-top:1px solid var(--line)}
+.impact-mini{margin-bottom:6px;color:var(--blue);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.impact-story p{margin:0 0 17px;color:var(--muted);font-size:13px;line-height:1.65}
+.impact-outcomes{padding-left:28px;border-left:1px solid var(--line)}
+.impact-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.impact-metrics div{padding:15px 13px;border-radius:12px;background:rgba(10,42,82,.035)}
+.impact-metrics strong{display:block;color:var(--blue);font-size:24px;line-height:1.1}
+.impact-metrics span{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.35}
+.impact-note{margin:15px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+@media(max-width:900px){
+  .impact-body{grid-template-columns:1fr;gap:20px}
+  .impact-outcomes{padding-left:0;border-left:0;padding-top:20px;border-top:1px solid var(--line)}
+}
+@media(max-width:720px){
+  .impact-card{padding:22px 20px}
+  .impact-card h3{font-size:18px}
+  .impact-metrics{grid-template-columns:1fr}
+  .impact-metrics div{display:flex;align-items:baseline;gap:10px}
+  .impact-metrics span{margin-top:0}
+}
+</style><style>
+/* Requested Selected Leadership Impact card treatment */
+.impact-card{background:#0b2f68;border-color:rgba(255,255,255,.16);box-shadow:0 12px 32px rgba(10,42,82,.12)}
+.impact-card h3{color:#fff}
+.impact-card .impact-label,.impact-card .impact-mini{color:#9cc9ff}
+.impact-card .impact-story p{color:rgba(255,255,255,.76)}
+.impact-card .impact-body{border-top-color:rgba(255,255,255,.16)}
+.impact-card .impact-outcomes{border-left-color:rgba(255,255,255,.16)}
+.impact-card .impact-metrics div{background:rgba(255,255,255,.055)}
+.impact-card .impact-metrics strong{color:#9cc9ff}
+.impact-card .impact-metrics span{color:rgba(255,255,255,.76)}
+@media(max-width:900px){.impact-card .impact-outcomes{border-top-color:rgba(255,255,255,.16)}}
+</style><style>
+/* Selected Leadership Impact — premium visual preview only */
+.impact-card{
+  position:relative;
+  overflow:hidden;
+  border-color:rgba(156,201,255,.20);
+  box-shadow:0 14px 34px rgba(5,27,65,.14), 0 2px 8px rgba(5,27,65,.08);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.impact-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:2px;
+  background:rgba(156,201,255,.55);
+  opacity:.75;
+}
+.impact-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(156,201,255,.34);
+  box-shadow:0 20px 42px rgba(5,27,65,.18), 0 3px 10px rgba(5,27,65,.09);
+}
+.impact-card-head{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  margin-bottom:8px;
+}
+.impact-card-head .impact-label{margin-bottom:0}
+.impact-icon{
+  width:31px;
+  height:31px;
+  flex:0 0 31px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(156,201,255,.26);
+  border-radius:9px;
+  background:rgba(255,255,255,.065);
+}
+.impact-icon svg{
+  width:16px;
+  height:16px;
+  stroke:#9cc9ff;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.impact-metrics strong{
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.02em;
+}
+</style><style>
+.engage-journey{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:14px;margin-top:34px;padding:22px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.engage-step>span,.engagement-num{display:block;margin-bottom:9px;color:var(--blue);font-size:10px;font-weight:900;letter-spacing:.13em}
+.engage-step h3{margin:0 0 7px;color:var(--navy);font-size:18px}.engage-step p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.engage-arrow{display:flex;align-items:center;color:var(--blue);font-size:20px;opacity:.65}
+.engagements-subsection{display:grid;grid-template-columns:minmax(230px,.7fr) minmax(0,1.5fr);gap:44px;margin-top:40px}
+.engagements-heading h2{margin:0;color:var(--navy);font-size:24px;line-height:1.3}
+.engagement-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.engagement-option{padding:19px 20px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 7px 22px rgba(10,42,82,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.engagement-option:hover{transform:translateY(-2px);border-color:rgba(10,42,82,.18);box-shadow:0 13px 28px rgba(10,42,82,.075)}
+.engagement-option h3{margin:0 0 6px;color:var(--navy);font-size:16px}.engagement-option p{margin:0;color:var(--muted);font-size:11.5px;line-height:1.55}
+@media(max-width:900px){.engage-journey{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px}.engage-arrow{display:none}.engagements-subsection{grid-template-columns:1fr;gap:22px}}
+@media(max-width:720px){.engage-journey{grid-template-columns:1fr;gap:18px;padding:22px 0}.engagement-options{grid-template-columns:1fr}.engagements-heading h2{font-size:21px}}
+</style><style>
+.engage-journey{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:14px;margin-top:34px;padding:24px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.engage-step>span,.engagement-num{display:block;margin-bottom:9px;color:var(--blue);font-size:10px;font-weight:900;letter-spacing:.13em}
+.engage-step h3{margin:0 0 8px;color:var(--navy);font-size:18px}.engage-step p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+.engage-arrow{display:flex;align-items:center;color:var(--blue);font-size:20px;opacity:.65}
+.engagements-subsection{display:grid;grid-template-columns:minmax(230px,.7fr) minmax(0,1.5fr);gap:44px;margin-top:40px}
+.engagements-heading h2{margin:0;color:var(--navy);font-size:24px;line-height:1.3}
+.engagement-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.engagement-option{padding:19px 20px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 7px 22px rgba(10,42,82,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.engagement-option:hover{transform:translateY(-2px);border-color:rgba(10,42,82,.18);box-shadow:0 13px 28px rgba(10,42,82,.075)}
+.engagement-option h3{margin:0 0 6px;color:var(--navy);font-size:16px}.engagement-option p{margin:0;color:var(--muted);font-size:11.5px;line-height:1.55}
+@media(max-width:900px){.engage-journey{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px}.engage-arrow{display:none}.engagements-subsection{grid-template-columns:1fr;gap:22px}}
+@media(max-width:720px){.engage-journey{grid-template-columns:1fr;gap:20px;padding:22px 0}.engagement-options{grid-template-columns:1fr}.engagements-heading h2{font-size:21px}}
+</style><style>
+/* How I Engage visual-polish preview: only styles for this section */
+.engage-combined{background:#fff}
+.engage-intro{max-width:980px}
+.engage-journey{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:12px;margin-top:34px;padding:4px 0 38px}
+.engage-step-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.engage-icon{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:25px;line-height:1;flex:0 0 46px}
+.engage-num{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.1em}
+.engage-step h3{margin:0;color:var(--navy);font-size:18px}
+.engage-step p{margin:0;color:var(--muted);font-size:12px;line-height:1.62}
+.engage-step .engage-lead{margin:0 0 6px;color:var(--blue);font-size:12px;font-weight:800}
+.engage-arrow{display:flex;align-items:center;color:var(--blue);font-size:22px;opacity:.7}
+.ways-engage-panel{margin-top:8px;padding:28px 30px 22px;border-radius:18px;background:var(--navy);color:#fff}
+.ways-heading{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:end;margin-bottom:22px}
+.ways-heading .section-kicker{color:#75adff}
+.ways-heading h2{margin:0;color:#fff;font-size:25px;line-height:1.25}
+.ways-heading p{margin:0;color:#dbe7f7;font-size:12px;line-height:1.6}
+.engagement-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.engagement-option{padding:18px 18px 19px;border:1px solid rgba(117,173,255,.38);border-radius:12px;background:rgba(255,255,255,.055);box-shadow:0 8px 24px rgba(0,0,0,.08);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.engagement-option:hover{transform:translateY(-3px);border-color:rgba(117,173,255,.7);box-shadow:0 14px 30px rgba(0,0,0,.15)}
+.engagement-icon{width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:12px}
+.engagement-option h3{margin:0 0 6px;color:#fff;font-size:16px}
+.engagement-summary{min-height:40px;margin:0;color:#eef5ff;font-size:11.5px;line-height:1.5}
+.engagement-divider{height:1px;background:rgba(180,210,245,.32);margin:14px 0 11px}
+.engagement-option strong{color:#73b0ff;font-size:11px}
+.engagement-option ul{margin:8px 0 0;padding-left:17px;color:#e2ecfa;font-size:10.8px;line-height:1.5}
+.engagement-option li{margin:4px 0}
+.engage-cta{margin:17px auto 0;max-width:920px;min-height:48px;padding:8px 12px 8px 20px;border:1px solid rgba(117,173,255,.38);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:15px;color:#e7f0fb;font-size:11.5px}
+.cta-sep{opacity:.5}.cta-button{margin-left:auto;display:inline-flex;align-items:center;gap:13px;padding:11px 24px;border-radius:6px;background:var(--blue);color:#fff;text-decoration:none;font-weight:800;white-space:nowrap}
+@media(max-width:1050px){.engagement-options{grid-template-columns:repeat(2,minmax(0,1fr))}.ways-heading{grid-template-columns:1fr}}
+@media(max-width:900px){.engage-journey{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.engage-arrow{display:none}}
+@media(max-width:720px){.engage-journey{grid-template-columns:1fr;gap:22px}.ways-engage-panel{padding:24px 18px 18px}.engagement-options{grid-template-columns:1fr}.engage-cta{flex-wrap:wrap;justify-content:flex-start}.cta-button{margin-left:0}.cta-sep{display:none}}
+</style></head>
 <body>
 <header>
  <div class="wrap nav">
@@ -533,36 +782,195 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 <article class="card"><div class="who-help-card-4 icon">04</div><h3>Organizations Exploring AI</h3><p><strong>Move AI from experimentation to production.</strong><br>Build production-ready capabilities with the right architecture, governance and engineering foundation.</p></article>
 </div></div></section>
 
-<section id="about" class="leverage"><div class="wrap leverage-grid"><div><div class="section-kicker">Where I Create Leverage</div><h2 class="section-title">Technology. People. Execution.</h2><p class="section-intro">Senior technology leadership across enterprise architecture, platform engineering, data, cloud and modern AI/GenAI — with a strong focus on building teams and predictable delivery.</p><div class="leverage-list"><article class="leverage-card"><div class="num">01</div><h3>Technology Strategy</h3><p>Align architecture, platforms and engineering investment with business priorities.</p></article><article class="leverage-card"><div class="num">02</div><h3>Engineering Leadership</h3><p>Build high-performing teams, operating models and leadership capability.</p></article><article class="leverage-card"><div class="num">03</div><h3>Modernization & AI</h3><p>Modernize legacy platforms and move practical AI / GenAI opportunities toward production.</p></article><article class="leverage-card"><div class="num">04</div><h3>Execution & Scale</h3><p>Turn complex initiatives into predictable delivery and measurable business outcomes.</p></article></div></div><aside class="belief"><div class="mini">Leadership Philosophy</div><h3>Better technology decisions create better business outcomes.</h3><p>My role is to bring clarity to difficult technology decisions, strengthen the people and operating model around them, and help teams execute with confidence.</p></aside></div></section>
+<section id="about" class="leverage"><div class="wrap leverage-grid"><div><div class="section-kicker">Where I Create Leverage</div><h2 class="section-title">Technology. People. Execution.</h2><p class="section-intro">Senior technology leadership across enterprise architecture, platform engineering, data, cloud and modern AI/GenAI — with a strong focus on building teams and predictable delivery.</p><div class="leverage-list"><article class="leverage-card"><div class="num">01</div><h3>Technology Strategy</h3><p><strong>Turn technology investment into business advantage.</strong><br>Align architecture, platforms and engineering investment with business priorities.</p></article><article class="leverage-card"><div class="num">02</div><h3>Engineering Leadership</h3><p><strong>Build organizations that can scale with confidence.</strong><br>Strengthen teams, leadership capability, operating models and engineering culture.</p></article><article class="leverage-card"><div class="num">03</div><h3>Modernization & AI</h3><p><strong>Move from legacy constraints to modern capabilities.</strong><br>Modernize platforms and turn practical AI / GenAI opportunities into production capabilities.</p></article><article class="leverage-card"><div class="num">04</div><h3>Execution & Scale</h3><p><strong>Make complex delivery more predictable.</strong><br>Improve engineering execution, operating discipline and measurable business outcomes.</p></article></div></div><aside class="belief"><div class="mini">Leadership Principle</div><h3>Better technology decisions create better business outcomes.</h3><p>I bring clarity to difficult technology decisions, strengthen the people and operating model around them, and help teams execute with confidence.</p></aside></div></section>
 
-<section id="expertise" class="proof"><div class="wrap"><div class="section-head"><div class="section-kicker">Expertise</div><h2 class="section-title">The leadership layers required to scale.</h2><p class="section-intro">A practical blend of executive direction, architectural depth and engineering operating discipline.</p></div><div class="cards">
-<article class="card"><div class="icon">01</div><h3>Engineering Organization</h3><p>Team structure, hiring, mentoring, performance, leadership development and engineering culture.</p></article>
-<article class="card"><div class="icon">02</div><h3>Technology Strategy</h3><p>Roadmaps, prioritization, technical risk, governance and business-aligned investment decisions.</p></article>
-<article class="card"><div class="icon">03</div><h3>Architecture & Modernization</h3><p>Enterprise architecture, APIs, distributed systems, cloud-native platforms and modernization.</p></article>
-<article class="card"><div class="icon">04</div><h3>AI & GenAI Transformation</h3><p>LLMs, RAG, AI Agents, MCP and intelligent automation from proof of concept toward production.</p></article>
-<article class="card"><div class="icon">05</div><h3>Data & Cloud Platforms</h3><p>AWS, GCP, Azure, data engineering, ETL/ELT, analytics and scalable platform foundations.</p></article>
-<article class="card"><div class="icon">06</div><h3>Engineering Excellence</h3><p>Agile delivery, CI/CD, observability, quality engineering, release management and predictable execution.</p></article>
-</div></div></section>
+<section id="expertise" class="proof">
+<div class="wrap">
+<div class="section-head">
+<div class="section-kicker">Expertise</div>
+<h2 class="section-title">Technical depth that supports executive decisions.</h2>
+<p class="section-intro">Deep experience across architecture, platforms, engineering, data and AI—applied with a focus on business outcomes.</p>
+</div>
+<div class="expertise-grid">
+<article class="expertise-card"><div class="expertise-num">01</div><h3>Architecture &amp; Platforms</h3><strong>Design systems that scale with the business.</strong><p>Distributed systems · Platform architecture · APIs · Microservices · Event-driven systems</p></article>
+<article class="expertise-card"><div class="expertise-num">02</div><h3>Cloud &amp; Infrastructure</h3><strong>Build resilient, efficient technology foundations.</strong><p>Cloud architecture · Kubernetes · Infrastructure modernization · Observability · Reliability</p></article>
+<article class="expertise-card"><div class="expertise-num">03</div><h3>Data &amp; AI</h3><strong>Turn data and AI into production capabilities.</strong><p>Data platforms · Analytics · ML · GenAI · AI architecture · Data engineering</p></article>
+<article class="expertise-card"><div class="expertise-num">04</div><h3>Engineering Excellence</h3><strong>Raise the quality and velocity of engineering organizations.</strong><p>Engineering practices · Developer productivity · CI/CD · Quality · SRE · Agile delivery</p></article>
+<article class="expertise-card"><div class="expertise-num">05</div><h3>Product &amp; Commerce</h3><strong>Connect technology execution to customer and revenue outcomes.</strong><p>E-commerce · Digital platforms · APIs · Customer experience · Product engineering</p></article>
+<article class="expertise-card"><div class="expertise-num">06</div><h3>Emerging Technology</h3><strong>Evaluate what’s next—and turn signal into strategy.</strong><p>AI/GenAI · Cloud-native technologies · Automation · New platform capabilities</p></article>
+</div>
+</div>
+</section>
 
-<section id="cases" class="cases"><div class="wrap"><div class="section-head"><div class="section-kicker">Selected Leadership Impact</div><h2 class="section-title">Proof through scale and execution.</h2><p class="section-intro">Selected examples from enterprise data, AI, platform and engineering leadership work.</p></div><div class="case-grid">
-<article class="case"><div class="tag">01 · Commerce Intelligence</div><h3>20M+ daily data points across 100+ e-commerce sites</h3><p>Led and mentored engineering talent across Data Collection, ETL, Visualization and Data Quality. Built scalable data platforms and commerce intelligence capabilities supporting enterprise-scale operations.</p><div class="result"><span>20M+ daily data points</span><span>100+ commerce platforms</span><span>30% lower infra cost*</span><span>40% faster data workflows*</span></div><div class="impact">Impact: stronger data quality, operational reliability and business insight.</div></article>
-<article class="case"><div class="tag">02 · AI Search & Recommendations</div><h3>Engineering leadership for AI-powered product discovery</h3><p>Led cross-functional Data Science, ML and Platform Engineering teams covering search relevance, recommendations, product tagging and intelligent product matching.</p><div class="result"><span>25% productivity uplift*</span><span>2× release frequency*</span><span>Search relevance</span><span>Recommendations</span></div><div class="impact">Impact: improved search relevance, recommendation quality and delivery predictability.</div></article>
-<article class="case"><div class="tag">03 · Enterprise GenAI</div><h3>RAG, AI Agents and MCP for enterprise workflows</h3><p>Designed enterprise-grade GenAI applications, knowledge assistants, engineering copilots and intelligent automation using LLMs, vector databases, RAG, AI Agents and MCP.</p><div class="result"><span>30% faster time-to-market*</span><span>35% workflow automation*</span><span>LLMs</span><span>RAG</span><span>AI Agents</span></div><div class="impact">Focus: practical AI architecture and reusable cloud-native AI engineering.</div></article>
-<article class="case"><div class="tag">04 · Engineering Organization</div><h3>Building teams, standards and execution systems</h3><p>Mentored and supported engineers and emerging leaders across platform, data, full-stack and infrastructure automation; established hiring, roadmap, CI/CD, governance and release practices.</p><div class="result"><span>100+ engineers mentored</span><span>30% fewer incidents*</span><span>20% faster delivery*</span><span>Operating Model</span></div><div class="impact">Impact: stronger engineering productivity, delivery discipline and operational efficiency.</div></article>
-</div><p class="metrics-note">*Illustrative outcome placeholders added for now — please validate and replace with your actual results before publishing.</p></div></section>
+<section id="impact" class="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-kicker">Selected Leadership Impact</div>
+      <h2 class="section-title">Turning complex technology challenges into measurable outcomes.</h2>
+      <p class="section-intro">Selected examples of technology leadership, modernization and engineering transformation at enterprise scale.</p>
+    </div>
 
-<section id="approach" class="approach"><div class="wrap approach-grid"><div><div class="section-kicker">How I Engage</div><h2 class="section-title">Assess. Shape. Lead. Scale.</h2><p class="section-intro">A pragmatic leadership model for organizations that need senior technology direction and measurable progress without unnecessary complexity.</p></div><div class="steps">
-<div class="step"><div class="step-num">01</div><h3>Assess</h3><p>Understand business priorities, people, architecture, delivery and technology risk.</p></div>
-<div class="step"><div class="step-num">02</div><h3>Shape</h3><p>Create the technology strategy, roadmap, operating model and decision framework.</p></div>
-<div class="step"><div class="step-num">03</div><h3>Lead</h3><p>Work with leadership and engineering teams to drive execution and remove blockers.</p></div>
-<div class="step"><div class="step-num">04</div><h3>Scale</h3><p>Build sustainable capability so the organization can continue with confidence.</p></div>
-</div></div></section>
+    <div class="impact-list">
+      <article class="impact-card">
+        <div class="impact-top">
+          <div>
+            <div class="impact-card-head"><span class="impact-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v7c0 1.66 3.13 3 7 3s7-1.34 7-3V5"/><path d="M5 12v7c0 1.66 3.13 3 7 3s7-1.34 7-3v-7"/></svg>
+    </span><div class="impact-label">01 · ENTERPRISE DATA PLATFORM</div></div>
+            <h3>Scaling data capabilities across the enterprise.</h3>
+          </div>
+        </div>
+        <div class="impact-body">
+          <div class="impact-story">
+            <div class="impact-mini">Challenge</div>
+            <p>Scale data processing and platform capabilities while maintaining reliability and performance.</p>
+            <div class="impact-mini">Leadership</div>
+            <p>Led architecture, engineering execution and platform modernization across a large engineering organization.</p>
+          </div>
+          <div class="impact-outcomes">
+            <div class="impact-mini">Outcome</div>
+            <div class="impact-metrics">
+              <div><strong>20M+</strong><span>daily data points</span></div>
+              <div><strong>35%</strong><span>infrastructure cost reduction</span></div>
+              <div><strong>40%</strong><span>performance improvement</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-<section id="engagements" class="engage"><div class="wrap"><div class="section-head center"><div class="section-kicker">Engagements</div><h2 class="section-title">Leadership when you need it.</h2><p class="section-intro">Flexible senior technology leadership without requiring an immediate full-time executive hire.</p></div><div class="cards">
-<article class="card"><strong>Fractional CTO</strong><h3>Strategic technology leadership</h3><p>Technology strategy, architecture, AI direction, technical risk, roadmap and executive-level technology decisions.</p></article>
-<article class="card"><strong>Fractional VP / Head of Engineering</strong><h3>Engineering organization & execution</h3><p>Engineering structure, hiring, leadership development, delivery, standards and operational excellence.</p></article>
-<article class="card"><strong>Technology & AI Advisor</strong><h3>Targeted senior guidance</h3><p>Architecture reviews, modernization, AI/GenAI strategy, technical due diligence and focused transformation programs.</p></article>
-</div></div></section>
+      <article class="impact-card">
+        <div class="impact-card-head"><span class="impact-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m14 5-4 14"/></svg>
+    </span><div class="impact-label">02 · ENGINEERING TRANSFORMATION</div></div>
+        <h3>Improving engineering velocity, quality and operating discipline.</h3>
+        <div class="impact-body">
+          <div class="impact-story">
+            <div class="impact-mini">Challenge</div>
+            <p>Increase delivery speed and consistency while strengthening engineering quality at scale.</p>
+            <div class="impact-mini">Leadership</div>
+            <p>Established stronger engineering practices, operating rhythms and leadership mechanisms across teams.</p>
+          </div>
+          <div class="impact-outcomes">
+            <div class="impact-mini">Outcome</div>
+            <div class="impact-metrics">
+              <div><strong>30%</strong><span>productivity improvement</span></div>
+              <div><strong>2×</strong><span>deployment frequency</span></div>
+              <div><strong>25%</strong><span>fewer production incidents</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="impact-card">
+        <div class="impact-card-head"><span class="impact-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 8.5 4.5 4.5 0 0 0 7 18Z"/><path d="M12 10v7"/><path d="m9.5 14 2.5 2.5 2.5-2.5"/></svg>
+    </span><div class="impact-label">03 · PLATFORM MODERNIZATION</div></div>
+        <h3>Modernizing legacy platforms for scale and speed.</h3>
+        <div class="impact-body">
+          <div class="impact-story">
+            <div class="impact-mini">Challenge</div>
+            <p>Reduce technology constraints and create a more scalable foundation for future growth.</p>
+            <div class="impact-mini">Leadership</div>
+            <p>Directed modernization strategy, architecture decisions and execution across critical platforms.</p>
+          </div>
+          <div class="impact-outcomes">
+            <div class="impact-mini">Outcome</div>
+            <div class="impact-metrics">
+              <div><strong>40%</strong><span>faster time-to-market</span></div>
+              <div><strong>30%</strong><span>platform cost reduction</span></div>
+              <div><strong>99.9%</strong><span>target platform availability</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="impact-card">
+        <div class="impact-card-head"><span class="impact-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3"/><path d="M6 20a6 6 0 0 1 12 0"/><path d="M5 12a3 3 0 0 0-3 3v1"/><path d="M19 12a3 3 0 0 1 3 3v1"/></svg>
+    </span><div class="impact-label">04 · ORGANIZATIONAL SCALE</div></div>
+        <h3>Building leadership capacity that compounds over time.</h3>
+        <div class="impact-body">
+          <div class="impact-story">
+            <div class="impact-mini">Challenge</div>
+            <p>Scale engineering leadership capability while maintaining accountability, culture and execution.</p>
+            <div class="impact-mini">Leadership</div>
+            <p>Mentored and developed engineering leaders and senior engineers, helping teams take on broader responsibilities.</p>
+          </div>
+          <div class="impact-outcomes">
+            <div class="impact-mini">Outcome</div>
+            <div class="impact-metrics">
+              <div><strong>100+</strong><span>engineers mentored</span></div>
+              <div><strong>35%</strong><span>internal progression</span></div>
+              <div><strong>30%</strong><span>leadership capability uplift</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="how-i-engage" class="engage-combined">
+<div class="wrap">
+<div class="section-head engage-intro">
+<div class="section-kicker">How I Engage</div>
+<h2 class="section-title">From assessment to execution, with outcomes that last.</h2>
+<p class="section-intro">A practical leadership approach that brings clarity, drives execution and builds the capabilities needed to sustain the change.</p>
+</div>
+
+<div class="engage-journey">
+<div class="engage-step"><div class="engage-step-top"><span class="engage-icon">⌕</span><span class="engage-num">01</span><h3>Assess</h3></div><p class="engage-lead">Understand the full picture.</p><p>Deep dive into business goals, technology landscape, data, team capabilities and operating model. Identify constraints, risks and the highest-value opportunities.</p></div>
+<div class="engage-arrow">→</div>
+<div class="engage-step"><div class="engage-step-top"><span class="engage-icon">◎</span><span class="engage-num">02</span><h3>Align</h3></div><p class="engage-lead">Define the right direction.</p><p>Establish technology strategy, architecture principles, investment priorities and measurable outcomes. Align leadership and engineering teams around a shared vision and roadmap.</p></div>
+<div class="engage-arrow">→</div>
+<div class="engage-step"><div class="engage-step-top"><span class="engage-icon">↗</span><span class="engage-num">03</span><h3>Lead</h3></div><p class="engage-lead">Drive execution with focus.</p><p>Translate strategy into action. Make critical decisions, remove roadblocks, guide engineering teams and partners, and ensure disciplined delivery of outcomes that move the business forward.</p></div>
+<div class="engage-arrow">→</div>
+<div class="engage-step"><div class="engage-step-top"><span class="engage-icon">↗</span><span class="engage-num">04</span><h3>Scale</h3></div><p class="engage-lead">Build for scale and sustainability.</p><p>Institutionalize platforms, processes and operating models. Develop leaders, strengthen engineering culture and build the capability for the organization to sustain and continuously improve.</p></div>
+</div>
+
+<div class="ways-engage-panel">
+<div class="ways-heading">
+<div class="section-kicker">Ways I Engage</div>
+<h2>Flexible engagement models to match your needs.</h2>
+<p>Choose the level of engagement that fits your situation. All engagements are outcome-focused and tailored to your context.</p>
+</div>
+
+<div class="engagement-options">
+<article class="engagement-option">
+<div class="engagement-icon">♙</div><h3>Fractional CTO</h3>
+<p class="engagement-summary">Strategic technology leadership without the full-time executive commitment.</p>
+<div class="engagement-divider"></div><strong>Best when you...</strong>
+<ul><li>Need senior technology leadership but not a full-time CTO</li><li>Are scaling and need architecture and platform direction</li><li>Need help building or elevating your engineering organization</li><li>Want ongoing leadership, guidance and accountability</li></ul>
+</article>
+
+<article class="engagement-option">
+<div class="engagement-icon">▱</div><h3>Technology Advisor</h3>
+<p class="engagement-summary">Independent perspective for critical technology decisions.</p>
+<div class="engagement-divider"></div><strong>Best when you...</strong>
+<ul><li>Need an outside view on key technology decisions</li><li>Are evaluating options, partners or new technologies</li><li>Need architecture or technical due diligence</li><li>Want guidance without ongoing day-to-day involvement</li></ul>
+</article>
+
+<article class="engagement-option">
+<div class="engagement-icon">⌁</div><h3>Transformation Partner</h3>
+<p class="engagement-summary">Hands-on partner for complex technology transformations.</p>
+<div class="engagement-divider"></div><strong>Best when you...</strong>
+<ul><li>Are modernizing platforms, migrating to cloud or adopting new technology</li><li>Have a large-scale data, AI or digital transformation initiative</li><li>Need help turning strategy into measurable outcomes</li><li>Need an experienced partner to drive delivery and adoption</li></ul>
+</article>
+
+<article class="engagement-option">
+<div class="engagement-icon">♧</div><h3>Engineering Leadership</h3>
+<p class="engagement-summary">Strengthen engineering execution and leadership capability.</p>
+<div class="engagement-divider"></div><strong>Best when you...</strong>
+<ul><li>Need to improve engineering delivery and productivity</li><li>Are building or redesigning your engineering organization</li><li>Need leadership coaching and team development</li><li>Want to establish strong operating rhythms and accountability</li></ul>
+</article>
+</div>
+
+<div class="engage-cta"><span>Engagements are tailored, flexible and remote-first.</span><span class="cta-sep">|</span><span>Let's discuss what's right for your organization.</span><a class="cta-button" href="#contact">Let's Talk <span>→</span></a></div>
+</div>
+</div>
+</section>
+
+
 
 <section class="tech-section"><div class="wrap tech-wrap"><div><div class="section-kicker">Technical Depth</div><h2 class="section-title">Broad technical depth. Executive-level perspective.</h2><p class="section-intro">Enough hands-on understanding to challenge assumptions, guide architecture and help teams make practical technology choices.</p></div><div><div class="tech"><span class="pill">Python</span><span class="pill">FastAPI</span><span class="pill">Django</span><span class="pill">React</span><span class="pill">AWS</span><span class="pill">GCP</span><span class="pill">Azure</span><span class="pill">Kubernetes</span><span class="pill">Docker</span><span class="pill">Databricks</span><span class="pill">Airflow</span><span class="pill">Redshift</span><span class="pill">BigQuery</span><span class="pill">LLMs</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">MCP</span><span class="pill">LangChain</span><span class="pill">LangGraph</span><span class="pill">CI/CD</span><span class="pill">Datadog</span><span class="pill">New Relic</span></div><div class="tech-note" style="margin-top:18px"><strong>Technology should serve the business.</strong><p>Architecture, platforms and AI choices are evaluated through the lens of reliability, speed, cost, maintainability and business value.</p></div></div></div></section>
 
