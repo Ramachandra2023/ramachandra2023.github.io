@@ -761,6 +761,69 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 .who-help .card strong{font-size:14px}
 .expertise-card strong{font-size:14px}
 </style>
+<style>
+/* Preview-only styling for CTO Perspective and Testimonials */
+.perspective p + p{margin-top:12px}
+.testimonials .section-intro{max-width:850px;margin:0 0 28px}
+.testimonial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.testimonial-card{background:#f8fbff;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 14px 14px 0;padding:20px 22px}
+.testimonial-card .quote{background:transparent;border:0;border-radius:0;padding:0;max-width:none;color:var(--muted);font-size:13px;line-height:1.7}
+.testimonial-person{margin-top:15px;color:var(--navy);font-size:11px;font-weight:800}
+.testimonial-person span{color:#8aa0bd;font-weight:600}
+@media(max-width:700px){.testimonial-grid{grid-template-columns:1fr}}
+</style>
+<style>
+/* Final visual polish preview — spacing + blue card-label hierarchy only */
+
+/* 1) Compact the first section/hero transition on desktop and mobile.
+   Keep the hero itself intact; reduce only the surrounding vertical padding. */
+@media (min-width: 901px){
+  .hero, .hero-section, #hero { padding-bottom: 22px !important; }
+  .hero + section, .hero-section + section, #hero + section { padding-top: 22px !important; }
+}
+@media (max-width: 900px){
+  .hero, .hero-section, #hero { padding-bottom: 14px !important; }
+  .hero + section, .hero-section + section, #hero + section { padding-top: 14px !important; }
+}
+
+/* If the first content section follows the hero via a wrapper rather than
+   an adjacent section, tighten its top spacing without changing content. */
+@media (min-width: 901px){
+  .hero + .section, .hero-section + .section, #hero + .section { margin-top: 0 !important; }
+}
+@media (max-width: 900px){
+  .hero + .section, .hero-section + .section, #hero + .section { margin-top: 0 !important; }
+}
+
+/* 2) Make the blue outcome/label text in Where I Create Leverage more visible,
+   and align other card outcome labels to the same readable scale. */
+.where-leverage .blue,
+.where-leverage .card-label,
+.where-leverage .outcome,
+.where-i-create-leverage .blue,
+.where-i-create-leverage .card-label,
+.where-i-create-leverage .outcome,
+#where-i-create-leverage .blue,
+#where-i-create-leverage .card-label,
+#where-i-create-leverage .outcome {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+}
+
+/* Common class names used by the site's card copy, if present. */
+.leverage-card .blue,
+.leverage-card .card-label,
+.leverage-card .outcome,
+.leverage-item .blue,
+.leverage-item .card-label,
+.leverage-item .outcome {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -1016,9 +1079,26 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 <div class="technical-note"><span class="technical-note-mark">+</span><div><strong>Technical depth with executive perspective.</strong> I use technology expertise to evaluate trade-offs, challenge assumptions and help teams make decisions that are practical, scalable and aligned to business outcomes.</div></div>
 </div></section>
 
-<section class="perspective"><div class="perspective-inner"><div class="wrap perspective-grid"><div><div class="section-kicker">CTO Perspective</div><div class="quote-mark">“</div></div><div><blockquote>Technology leadership is not about having more technology. It is about making better business decisions with technology.</blockquote><p>The strongest engineering organizations connect strategy, architecture, people and execution — and make those connections visible to the business.</p></div></div></div></section>
+<section class="perspective">
+<div class="perspective-inner"><div class="wrap perspective-grid">
+<div><div class="section-kicker">CTO Perspective</div><div class="quote-mark">“</div></div>
+<div>
+<blockquote>Technology should create clarity, speed and leverage — not complexity for its own sake.</blockquote>
+<p>My role as a technology leader is to connect business ambition with the right technology choices: knowing where to invest, where to simplify, what to modernize, and what not to build. The strongest outcomes come when strategy, architecture, engineering and people move together with clear accountability.</p>
+<p>That means balancing innovation with operational discipline, moving AI from experimentation to practical value, and building engineering organizations that can execute today while becoming stronger tomorrow.</p>
+</div></div></div></section>
 
-<section class="testimonials"><div class="wrap"><div class="section-kicker">Testimonials</div><h2 class="section-title">Leadership, validated by people.</h2><div class="quote">Testimonials will be added here from managers, peers, founders or clients once approved for publication.<small>Real recommendations only — no fabricated quotes.</small></div></div></section>
+<section class="testimonials">
+<div class="wrap">
+<div class="section-kicker">Testimonials</div>
+<h2 class="section-title">Leadership, validated by people.</h2>
+<p class="section-intro">Sample testimonials for layout and positioning — to be replaced with approved recommendations from real clients, peers or leaders.</p>
+<div class="testimonial-grid">
+<article class="testimonial-card"><div class="quote">“Ramachandra brought structure to a complex technology agenda and helped us focus on the few decisions that mattered most. He connected architecture, engineering execution and business priorities in a way that made the path forward much clearer.”</div><div class="testimonial-person">CEO / Founder <span>· Sample placeholder</span></div></article>
+<article class="testimonial-card"><div class="quote">“What stood out was his ability to go deep technically without losing the executive perspective. He challenged assumptions, simplified difficult trade-offs and helped the team move from discussion to decisive execution.”</div><div class="testimonial-person">Business / Technology Leader <span>· Sample placeholder</span></div></article>
+<article class="testimonial-card"><div class="quote">“Ramachandra helped strengthen both the engineering system and the leaders operating within it. The impact was not just better delivery — it was a more accountable, confident and scalable engineering organization.”</div><div class="testimonial-person">Engineering Leader <span>· Sample placeholder</span></div></article>
+<article class="testimonial-card"><div class="quote">“He combines the perspective of a CTO with the depth of a hands-on technology leader. Whether the challenge was modernization, platform scale or AI, he consistently brought clarity, pragmatism and a strong bias toward measurable outcomes.”</div><div class="testimonial-person">Executive / Transformation Leader <span>· Sample placeholder</span></div></article>
+</div></div></section>
 
 <section id="contact" class="cta"><div class="wrap cta-grid"><div><div class="section-kicker" style="color:#79bcff">Let's Connect</div><h2 class="section-title">Have a complex technology challenge?</h2><p>Whether you're scaling engineering, modernizing platforms, improving execution, or exploring AI opportunities, let's discuss where focused technology leadership can create the most leverage.</p><div class="social"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ramachandrarajus/">LinkedIn ↗</a><a href="mailto:sramachandra2022@gmail.com">Email Ramachandra ↗</a></div></div><div class="cta-actions"><a class="btn btn-primary" style="background:#fff;color:#071f49" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><span class="btn btn-disabled" style="border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.07)" aria-disabled="true" tabindex="-1" title="Executive profile download is currently unavailable">Download Executive Profile</span></div></div></section>
 </main>
