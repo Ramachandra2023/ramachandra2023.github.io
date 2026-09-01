@@ -735,7 +735,33 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 @media(max-width:1050px){.engagement-options{grid-template-columns:repeat(2,minmax(0,1fr))}.ways-heading{grid-template-columns:1fr}}
 @media(max-width:900px){.engage-journey{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.engage-arrow{display:none}}
 @media(max-width:720px){.engage-journey{grid-template-columns:1fr;gap:22px}.ways-engage-panel{padding:24px 18px 18px}.engagement-options{grid-template-columns:1fr}.engage-cta{flex-wrap:wrap;justify-content:flex-start}.cta-button{margin-left:0}.cta-sep{display:none}}
-</style></head>
+</style><style>
+.technical-depth-preview{background:#fff}
+.technical-depth-head{max-width:1030px}
+.technical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.technical-card{padding:22px 22px 21px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 8px 24px rgba(10,42,82,.045);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.technical-card:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(10,42,82,.09);border-color:rgba(10,42,82,.18)}
+.technical-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:17px}
+.technical-icon{width:38px;height:38px;border-radius:10px;background:#edf5ff;color:var(--blue);display:inline-flex;align-items:center;justify-content:center;font-size:19px;font-weight:800}
+.technical-label{font-size:10px;font-weight:900;letter-spacing:.12em;color:#8aa0bd}
+.technical-card h3{margin:0 0 8px;color:var(--navy);font-size:17px;line-height:1.3}
+.technical-outcome{margin:0 0 13px;color:var(--blue);font-size:11.5px;font-weight:800;line-height:1.5}
+.technical-evidence{padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:10.8px;line-height:1.65}
+.technical-note{display:flex;align-items:flex-start;gap:13px;max-width:930px;margin:28px auto 0;padding:16px 19px;border-radius:12px;background:#f5f8fc;border:1px solid #e3eaf3;color:var(--muted);font-size:11.5px;line-height:1.65}
+.technical-note-mark{width:25px;height:25px;flex:0 0 25px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+.technical-note strong{color:var(--navy)}
+@media(max-width:950px){.technical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.technical-grid{grid-template-columns:1fr}.technical-card{padding:19px}.technical-note{margin-top:22px}}
+</style>
+<style>
+/* Typography-only refinement requested by user */
+.technical-outcome{font-size:14px}
+.technical-note{font-size:13px}
+.technical-note strong{font-size:20px}
+.who-help .card strong{font-size:14px}
+.expertise-card strong{font-size:14px}
+</style>
+</head>
 <body>
 <header>
  <div class="wrap nav">
@@ -972,7 +998,23 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 
 
 
-<section class="tech-section"><div class="wrap tech-wrap"><div><div class="section-kicker">Technical Depth</div><h2 class="section-title">Broad technical depth. Executive-level perspective.</h2><p class="section-intro">Enough hands-on understanding to challenge assumptions, guide architecture and help teams make practical technology choices.</p></div><div><div class="tech"><span class="pill">Python</span><span class="pill">FastAPI</span><span class="pill">Django</span><span class="pill">React</span><span class="pill">AWS</span><span class="pill">GCP</span><span class="pill">Azure</span><span class="pill">Kubernetes</span><span class="pill">Docker</span><span class="pill">Databricks</span><span class="pill">Airflow</span><span class="pill">Redshift</span><span class="pill">BigQuery</span><span class="pill">LLMs</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">MCP</span><span class="pill">LangChain</span><span class="pill">LangGraph</span><span class="pill">CI/CD</span><span class="pill">Datadog</span><span class="pill">New Relic</span></div><div class="tech-note" style="margin-top:18px"><strong>Technology should serve the business.</strong><p>Architecture, platforms and AI choices are evaluated through the lens of reliability, speed, cost, maintainability and business value.</p></div></div></div></section>
+<section id="technical-depth" class="tech-section technical-depth-preview">
+<div class="wrap">
+<div class="section-head technical-depth-head">
+<div class="section-kicker">Technical Depth</div>
+<h2 class="section-title">Deep enough to challenge assumptions, guide architecture and make the right technology decisions.</h2>
+<p class="section-intro">Hands-on technical depth across architecture, platforms, data, AI and engineering systems — applied where it creates the most leverage for the business.</p>
+</div>
+<div class="technical-grid">
+<article class="technical-card"><div class="technical-card-top"><span class="technical-icon">⌘</span><span class="technical-label">01</span></div><h3>Architecture &amp; Distributed Systems</h3><p class="technical-outcome">Design systems that scale reliably.</p><div class="technical-evidence">Enterprise Architecture · Distributed Systems · Microservices · Event-Driven Systems · APIs</div></article>
+<article class="technical-card"><div class="technical-card-top"><span class="technical-icon">☁</span><span class="technical-label">02</span></div><h3>Cloud &amp; Platform Engineering</h3><p class="technical-outcome">Build resilient platforms that accelerate delivery.</p><div class="technical-evidence">Cloud Architecture · Kubernetes · Containers · Platform Engineering · DevOps · Infrastructure Automation</div></article>
+<article class="technical-card"><div class="technical-card-top"><span class="technical-icon">◈</span><span class="technical-label">03</span></div><h3>Data Engineering &amp; Platforms</h3><p class="technical-outcome">Turn high-volume data into dependable business capability.</p><div class="technical-evidence">Data Platforms · Streaming · ETL / ELT · Data Architecture · High-Volume Processing</div></article>
+<article class="technical-card"><div class="technical-card-top"><span class="technical-icon">✦</span><span class="technical-label">04</span></div><h3>AI / GenAI Engineering</h3><p class="technical-outcome">Move AI from experimentation into production.</p><div class="technical-evidence">RAG · Agentic Systems · LLM Applications · AI Platforms · Evaluation · Production AI</div></article>
+<article class="technical-card"><div class="technical-card-top"><span class="technical-icon">⚙</span><span class="technical-label">05</span></div><h3>Engineering Systems</h3><p class="technical-outcome">Improve delivery speed, reliability and engineering productivity.</p><div class="technical-evidence">CI / CD · Observability · SRE · Engineering Productivity · Quality Engineering</div></article>
+<article class="technical-card"><div class="technical-card-top"><span class="technical-icon">↔</span><span class="technical-label">06</span></div><h3>Enterprise Integration</h3><p class="technical-outcome">Modernize complex technology estates without losing business continuity.</p><div class="technical-evidence">APIs · Integration Architecture · Legacy Modernization · Enterprise Systems · Security &amp; Governance</div></article>
+</div>
+<div class="technical-note"><span class="technical-note-mark">+</span><div><strong>Technical depth with executive perspective.</strong> I use technology expertise to evaluate trade-offs, challenge assumptions and help teams make decisions that are practical, scalable and aligned to business outcomes.</div></div>
+</div></section>
 
 <section class="perspective"><div class="perspective-inner"><div class="wrap perspective-grid"><div><div class="section-kicker">CTO Perspective</div><div class="quote-mark">“</div></div><div><blockquote>Technology leadership is not about having more technology. It is about making better business decisions with technology.</blockquote><p>The strongest engineering organizations connect strategy, architecture, people and execution — and make those connections visible to the business.</p></div></div></div></section>
 
