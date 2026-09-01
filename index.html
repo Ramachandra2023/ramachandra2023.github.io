@@ -974,6 +974,43 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   .hero-challenges-grid p{font-size:11px;line-height:1.5}
 }
 </style>
+<style>
+/* Final CTA visual polish — content/link scope only */
+.connect .section-title{max-width:900px}
+.connect .section-intro{max-width:820px}
+.connect-actions{margin-top:24px}
+.connect-note{margin-top:12px;font-size:12px;color:var(--muted)}
+.connect-links{margin-top:22px;display:flex;gap:18px;flex-wrap:wrap}
+.connect-links a{font-size:12px}
+@media(max-width:700px){
+  .connect-actions .btn{width:100%;text-align:center}
+  .connect-links{gap:12px}
+}
+</style>
+<style>
+/* Final Let's Connect blue-background treatment — no content changes */
+.connect{
+  background:var(--navy) !important;
+  color:#fff !important;
+}
+.connect .section-kicker,
+.connect .section-title,
+.connect .section-intro,
+.connect .connect-note,
+.connect .connect-links a{
+  color:#fff !important;
+}
+.connect .connect-note{
+  opacity:.78;
+}
+.connect .connect-links a{
+  opacity:.9;
+}
+.connect .btn-primary{
+  background:#fff !important;
+  color:var(--navy) !important;
+}
+</style>
 </head>
 <body>
 <header>
@@ -1258,7 +1295,18 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 <article class="testimonial-card"><div class="quote">“He combines the perspective of a CTO with the depth of a hands-on technology leader. Whether the challenge was modernization, platform scale or AI, he consistently brought clarity, pragmatism and a strong bias toward measurable outcomes.”</div><div class="testimonial-person">Michael Roberts <span>· Executive / Transformation Leader</span></div></article>
 </div></div></section>
 
-<section id="contact" class="cta"><div class="wrap cta-grid"><div><div class="section-kicker" style="color:#79bcff">Let's Connect</div><h2 class="section-title">Have a complex technology challenge?</h2><p>Whether you're scaling engineering, modernizing platforms, improving execution, or exploring AI opportunities, let's discuss where focused technology leadership can create the most leverage.</p><div class="social"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ramachandrarajus/">LinkedIn ↗</a><a href="mailto:sramachandra2022@gmail.com">Email Ramachandra ↗</a></div></div><div class="cta-actions"><a class="btn btn-primary" style="background:#fff;color:#071f49" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><span class="btn btn-disabled" style="border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.07)" aria-disabled="true" tabindex="-1" title="Executive profile download is currently unavailable">Download Executive Profile</span></div></div></section>
+<section class="connect">
+  <div class="wrap">
+    <div class="section-kicker">Let's Connect</div>
+    <h2 class="section-title">Let's turn technology complexity into business leverage.</h2>
+    <p class="section-intro">Whether you're scaling engineering, modernizing platforms, navigating AI adoption, or strengthening technology leadership, let's discuss the challenge and where focused leadership could create the most impact.</p>
+    <div class="connect-actions">
+      <a class="btn btn-primary" href="https://calendly.com/sramachandra2022/30min">Book a 30-minute conversation →</a>
+    </div>
+    <p class="connect-note">No pitch. Just a focused conversation about your challenge and what might help.</p>
+    <div class="connect-links"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ramachandrarajus/">LinkedIn ↗</a><a href="mailto:sramachandra2022@gmail.com">Email Ramachandra ↗</a></div>
+  </div>
+</section>
 </main>
 <footer><div class="wrap footer-row"><div><strong>Ramachandra Raju S</strong><br>Fractional CTO · Enterprise Engineering Leader</div><div>© 2026 · Global Remote · Based in India</div></div></footer>
 <script>const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));</script>
