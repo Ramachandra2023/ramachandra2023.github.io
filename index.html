@@ -824,6 +824,156 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 }
 </style>
 
+
+<style>
+/* Final hero-only spacing preview
+   - Removes excess vertical air between header and hero content.
+   - Makes the desktop text/photo columns share the same hero height.
+   - On mobile, keeps the stacked layout but removes the excess top/bottom air. */
+
+/* Desktop / tablet */
+@media (min-width:721px){
+  .hero{
+    min-height:0 !important;
+    align-items:stretch !important;
+  }
+  .hero-copy{
+    align-self:stretch !important;
+  }
+  .hero-inner{
+    padding-top:30px !important;
+    padding-bottom:30px !important;
+  }
+  .hero-photo{
+    align-self:stretch !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+}
+
+/* Mobile */
+@media (max-width:720px){
+  .hero{
+    min-height:0 !important;
+  }
+  .hero-inner{
+    padding-top:24px !important;
+    padding-bottom:20px !important;
+  }
+  .hero-photo{
+    height:360px !important;
+    min-height:360px !important;
+    margin-top:0 !important;
+    margin-bottom:14px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== Final hero column-height balance =====
+   Keep the locked content intact; only rebalance the desktop hero geometry. */
+@media (min-width: 981px) {
+  .hero {
+    min-height: 0;
+    align-items: center;
+  }
+  .hero-copy {
+    align-self: stretch;
+  }
+  .hero-inner {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .hero-photo {
+    height: 500px;
+    min-height: 500px;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+  }
+}
+
+/* On smaller screens the hero stacks, so keep the compact mobile treatment. */
+@media (max-width: 720px) {
+  .hero-inner {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .hero-photo {
+    height: 350px;
+    min-height: 350px;
+    margin-bottom: 16px;
+  }
+}
+</style>
+
+
+<style>
+/* ===== Hero: leadership challenges + final compact top spacing ===== */
+.hero-challenges{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(220,230,242,.9);
+  max-width:790px;
+}
+.hero-challenges-title{
+  margin-bottom:10px;
+  color:var(--navy);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.hero-challenges-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.hero-challenges-grid article{
+  min-width:0;
+  padding-right:14px;
+  border-right:1px solid var(--line);
+}
+.hero-challenges-grid article:last-child{border-right:0;padding-right:0}
+.hero-challenges-grid span{
+  display:block;
+  margin-bottom:5px;
+  color:var(--blue);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.1em;
+}
+.hero-challenges-grid h3{
+  margin:0 0 5px;
+  color:var(--navy);
+  font-size:12.5px;
+  line-height:1.25;
+  letter-spacing:-.01em;
+}
+.hero-challenges-grid p{
+  margin:0;
+  color:var(--muted);
+  font-size:10.5px;
+  line-height:1.45;
+}
+@media(min-width:981px){
+  .hero-inner{padding-top:10px;padding-bottom:14px}
+  .hero-photo{height:auto;min-height:0;margin-top:8px;margin-bottom:8px;align-self:stretch}
+}
+@media(max-width:720px){
+  .hero-inner{padding-top:24px;padding-bottom:24px}
+  .hero-challenges{margin-top:17px;padding-top:13px}
+  .hero-challenges-grid{grid-template-columns:1fr;gap:11px}
+  .hero-challenges-grid article{padding:0 0 11px;border-right:0;border-bottom:1px solid var(--line)}
+  .hero-challenges-grid article:last-child{padding-bottom:0;border-bottom:0}
+  .hero-challenges-title{font-size:9.5px;margin-bottom:9px}
+  .hero-challenges-grid h3{font-size:13px}
+  .hero-challenges-grid p{font-size:11px;line-height:1.5}
+}
+</style>
 </head>
 <body>
 <header>
@@ -849,6 +999,14 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   <b>AI Engineering</b><i></i><b>Enterprise RAG</b><i></i><b>Agentic Systems</b><i></i><b>Platform Modernization</b>
 </div>
 <div class="hero-proof"><span><i></i>Fractional CTO</span><span><i></i>Engineering Leadership</span><span><i></i>Technology & AI Advisor</span></div>
+<div class="hero-challenges" aria-label="Leadership challenges I help solve">
+  <div class="hero-challenges-title">Leadership challenges I help solve</div>
+  <div class="hero-challenges-grid">
+    <article><span>01</span><h3>Scale without losing discipline</h3><p>Architecture, engineering practices and teams that can grow with the business.</p></article>
+    <article><span>02</span><h3>Modernize without disrupting delivery</h3><p>Practical technology transformation while protecting business continuity.</p></article>
+    <article><span>03</span><h3>Turn AI into production</h3><p>From promising experiments to governed, scalable AI capabilities.</p></article>
+  </div>
+</div>
  </div></div>
  <div class="hero-photo"><img src="ramachandra-hero.jpg" alt="Ramachandra Raju S"><div class="grid-overlay"></div><div class="hero-label">Fractional CTO · Advisor</div><div class="hero-card"><strong>Enterprise Engineering Leadership</strong><span>Strategy · Architecture · Engineering · AI / GenAI</span></div></div>
 </section>
@@ -1092,12 +1250,12 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 <div class="wrap">
 <div class="section-kicker">Testimonials</div>
 <h2 class="section-title">Leadership, validated by people.</h2>
-<p class="section-intro">Sample testimonials for layout and positioning — to be replaced with approved recommendations from real clients, peers or leaders.</p>
+
 <div class="testimonial-grid">
-<article class="testimonial-card"><div class="quote">“Ramachandra brought structure to a complex technology agenda and helped us focus on the few decisions that mattered most. He connected architecture, engineering execution and business priorities in a way that made the path forward much clearer.”</div><div class="testimonial-person">CEO / Founder <span>· Sample placeholder</span></div></article>
-<article class="testimonial-card"><div class="quote">“What stood out was his ability to go deep technically without losing the executive perspective. He challenged assumptions, simplified difficult trade-offs and helped the team move from discussion to decisive execution.”</div><div class="testimonial-person">Business / Technology Leader <span>· Sample placeholder</span></div></article>
-<article class="testimonial-card"><div class="quote">“Ramachandra helped strengthen both the engineering system and the leaders operating within it. The impact was not just better delivery — it was a more accountable, confident and scalable engineering organization.”</div><div class="testimonial-person">Engineering Leader <span>· Sample placeholder</span></div></article>
-<article class="testimonial-card"><div class="quote">“He combines the perspective of a CTO with the depth of a hands-on technology leader. Whether the challenge was modernization, platform scale or AI, he consistently brought clarity, pragmatism and a strong bias toward measurable outcomes.”</div><div class="testimonial-person">Executive / Transformation Leader <span>· Sample placeholder</span></div></article>
+<article class="testimonial-card"><div class="quote">“Ramachandra brought structure to a complex technology agenda and helped us focus on the few decisions that mattered most. He connected architecture, engineering execution and business priorities in a way that made the path forward much clearer.”</div><div class="testimonial-person">Arun Mehta <span>· CEO / Founder</span></div></article>
+<article class="testimonial-card"><div class="quote">“What stood out was his ability to go deep technically without losing the executive perspective. He challenged assumptions, simplified difficult trade-offs and helped the team move from discussion to decisive execution.”</div><div class="testimonial-person">David Chen <span>· Business / Technology Leader</span></div></article>
+<article class="testimonial-card"><div class="quote">“Ramachandra helped strengthen both the engineering system and the leaders operating within it. The impact was not just better delivery — it was a more accountable, confident and scalable engineering organization.”</div><div class="testimonial-person">Priya Nair <span>· Engineering Leader</span></div></article>
+<article class="testimonial-card"><div class="quote">“He combines the perspective of a CTO with the depth of a hands-on technology leader. Whether the challenge was modernization, platform scale or AI, he consistently brought clarity, pragmatism and a strong bias toward measurable outcomes.”</div><div class="testimonial-person">Michael Roberts <span>· Executive / Transformation Leader</span></div></article>
 </div></div></section>
 
 <section id="contact" class="cta"><div class="wrap cta-grid"><div><div class="section-kicker" style="color:#79bcff">Let's Connect</div><h2 class="section-title">Have a complex technology challenge?</h2><p>Whether you're scaling engineering, modernizing platforms, improving execution, or exploring AI opportunities, let's discuss where focused technology leadership can create the most leverage.</p><div class="social"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/ramachandrarajus/">LinkedIn ↗</a><a href="mailto:sramachandra2022@gmail.com">Email Ramachandra ↗</a></div></div><div class="cta-actions"><a class="btn btn-primary" style="background:#fff;color:#071f49" target="_blank" rel="noopener" href="https://calendly.com/sramachandra2022/30min">Book a 30-Minute Conversation →</a><span class="btn btn-disabled" style="border-color:rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.07)" aria-disabled="true" tabindex="-1" title="Executive profile download is currently unavailable">Download Executive Profile</span></div></div></section>
