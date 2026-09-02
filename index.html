@@ -952,6 +952,239 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
 .actions{margin-bottom:14px}
 @media(max-width:720px){.actions{margin-bottom:14px}}
 </style>
+
+<style>
+/* ===== Final Premium Look & Feel Pass =====
+   Typography consistency + premium cards + section rhythm.
+   Content intentionally unchanged.
+*/
+:root{
+  --premium-border:rgba(20,55,95,.11);
+  --premium-border-strong:#d5e1ee;
+  --premium-shadow:0 12px 34px rgba(8,31,73,.055);
+  --premium-shadow-hover:0 18px 44px rgba(8,31,73,.095);
+}
+
+/* 1) Typography consistency */
+body{
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.section-kicker{
+  font-size:11px;
+  font-weight:850;
+  line-height:1.2;
+  letter-spacing:.15em;
+}
+.section-title{
+  font-weight:820;
+  line-height:1.07;
+}
+.section-intro{
+  color:#657892;
+  font-size:14px;
+  line-height:1.68;
+}
+.card h3,
+.who-help .card h3,
+.engagement-option h3,
+.impact-card h3,
+.step h3,
+.leverage-card h3{
+  font-weight:780;
+  letter-spacing:-.018em;
+}
+.who-help .card strong,
+.leverage-card p strong,
+.engage-step .engage-lead,
+.impact-mini,
+.impact-label{
+  font-weight:750;
+}
+.who-help .card p,
+.leverage-card p,
+.card p,
+.step p,
+.engagement-option p,
+.engagement-option li,
+.impact-story p,
+.impact-card p{
+  color:#687b94;
+}
+.proof .card p,
+.engage-combined .section-intro,
+.tech-section .section-intro,
+.testimonials .quote,
+.connect .section-intro{
+  color:#657892;
+}
+.who-help .card strong,
+.leverage-card p strong,
+.engage-step .engage-lead{
+  color:var(--blue);
+}
+.impact-metrics strong{
+  font-weight:820;
+}
+
+/* 2) Premium card treatment */
+.who-help .card,
+.proof .card,
+.engagement-option,
+.impact-card,
+.testimonial-card{
+  border:1px solid var(--premium-border);
+  box-shadow:var(--premium-shadow);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.who-help .card:hover,
+.proof .card:hover,
+.engagement-option:hover,
+.impact-card:hover,
+.testimonial-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--premium-border-strong);
+  box-shadow:var(--premium-shadow-hover);
+}
+.proof .card{
+  background:#fff;
+  border-radius:16px;
+  padding:24px 22px 25px;
+}
+.proof .card:hover{
+  background:#fff;
+}
+.who-help .card{
+  background:rgba(255,255,255,.82);
+  border-radius:16px;
+}
+.impact-card{
+  border-radius:17px;
+  overflow:hidden;
+}
+.impact-card:hover{
+  background:inherit;
+}
+.engagement-option{
+  border-radius:16px;
+}
+.engagement-option:hover{
+  transform:translateY(-3px);
+}
+.step{
+  border-color:var(--premium-border);
+}
+.testimonial-card{
+  border-radius:16px;
+  overflow:hidden;
+}
+.testimonials .quote{
+  border-radius:12px;
+}
+.tech-note,
+.belief{
+  border:1px solid var(--premium-border);
+  box-shadow:var(--premium-shadow);
+}
+
+/* Keep hero treatment restrained */
+.hero-card,
+.hero-photo{
+  box-shadow:0 18px 46px rgba(5,27,61,.14);
+}
+
+/* 3) Consistent section rhythm */
+.who-help,
+.leverage,
+.proof,
+.impact,
+.engage-combined,
+.tech-section,
+.testimonials{
+  padding-top:82px;
+  padding-bottom:86px;
+}
+.cases{
+  padding-top:86px;
+  padding-bottom:90px;
+}
+.perspective-inner{
+  padding-top:72px;
+  padding-bottom:72px;
+}
+.cta{
+  padding-top:72px;
+  padding-bottom:74px;
+}
+.connect{
+  padding-top:76px;
+  padding-bottom:78px;
+}
+.section-head{
+  margin-bottom:18px;
+}
+.cards,
+.impact-list,
+.engage-journey,
+.testimonial-grid{
+  margin-top:28px;
+}
+
+/* Mobile: compact but breathable */
+@media(max-width:720px){
+  .section-kicker{
+    font-size:11px;
+    letter-spacing:.13em;
+  }
+  .section-title{
+    line-height:1.08;
+  }
+  .section-intro{
+    font-size:14px;
+    line-height:1.62;
+  }
+  .who-help,
+  .leverage,
+  .proof,
+  .impact,
+  .engage-combined,
+  .tech-section,
+  .testimonials{
+    padding-top:64px;
+    padding-bottom:68px;
+  }
+  .cases{
+    padding-top:68px;
+    padding-bottom:72px;
+  }
+  .perspective-inner{
+    padding-top:58px;
+    padding-bottom:58px;
+  }
+  .cta,
+  .connect{
+    padding-top:62px;
+    padding-bottom:64px;
+  }
+  .section-head{
+    margin-bottom:14px;
+  }
+  .cards,
+  .impact-list,
+  .engage-journey,
+  .testimonial-grid{
+    margin-top:22px;
+  }
+  .who-help .card,
+  .proof .card,
+  .engagement-option,
+  .impact-card,
+  .testimonial-card{
+    border-radius:14px;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
