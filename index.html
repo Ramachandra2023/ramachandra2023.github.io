@@ -909,71 +909,6 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   }
 }
 </style>
-
-
-<style>
-/* ===== Hero: leadership challenges + final compact top spacing ===== */
-.hero-challenges{
-  margin-top:18px;
-  padding-top:14px;
-  border-top:1px solid rgba(220,230,242,.9);
-  max-width:790px;
-}
-.hero-challenges-title{
-  margin-bottom:10px;
-  color:var(--navy);
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-.hero-challenges-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-.hero-challenges-grid article{
-  min-width:0;
-  padding-right:14px;
-  border-right:1px solid var(--line);
-}
-.hero-challenges-grid article:last-child{border-right:0;padding-right:0}
-.hero-challenges-grid span{
-  display:block;
-  margin-bottom:5px;
-  color:var(--blue);
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:.1em;
-}
-.hero-challenges-grid h3{
-  margin:0 0 5px;
-  color:var(--navy);
-  font-size:12.5px;
-  line-height:1.25;
-  letter-spacing:-.01em;
-}
-.hero-challenges-grid p{
-  margin:0;
-  color:var(--muted);
-  font-size:10.5px;
-  line-height:1.45;
-}
-@media(min-width:981px){
-  .hero-inner{padding-top:10px;padding-bottom:14px}
-  .hero-photo{height:auto;min-height:0;margin-top:8px;margin-bottom:8px;align-self:stretch}
-}
-@media(max-width:720px){
-  .hero-inner{padding-top:24px;padding-bottom:24px}
-  .hero-challenges{margin-top:17px;padding-top:13px}
-  .hero-challenges-grid{grid-template-columns:1fr;gap:11px}
-  .hero-challenges-grid article{padding:0 0 11px;border-right:0;border-bottom:1px solid var(--line)}
-  .hero-challenges-grid article:last-child{padding-bottom:0;border-bottom:0}
-  .hero-challenges-title{font-size:9.5px;margin-bottom:9px}
-  .hero-challenges-grid h3{font-size:13px}
-  .hero-challenges-grid p{font-size:11px;line-height:1.5}
-}
-</style>
 <style>
 /* Final CTA visual polish — content/link scope only */
 .connect .section-title{max-width:900px}
@@ -1011,6 +946,12 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   color:var(--navy) !important;
 }
 </style>
+
+<style>
+/* Hero: slightly clearer separation between CTA actions and current focus. */
+.actions{margin-bottom:14px}
+@media(max-width:720px){.actions{margin-bottom:14px}}
+</style>
 </head>
 <body>
 <header>
@@ -1036,15 +977,7 @@ a:focus-visible,.menu:focus-visible{outline:3px solid #79bcff;outline-offset:3px
   <b>AI Engineering</b><i></i><b>Enterprise RAG</b><i></i><b>Agentic Systems</b><i></i><b>Platform Modernization</b>
 </div>
 <div class="hero-proof"><span><i></i>Fractional CTO</span><span><i></i>Engineering Leadership</span><span><i></i>Technology & AI Advisor</span></div>
-<div class="hero-challenges" aria-label="Leadership challenges I help solve">
-  <div class="hero-challenges-title">Leadership challenges I help solve</div>
-  <div class="hero-challenges-grid">
-    <article><span>01</span><h3>Scale without losing discipline</h3><p>Architecture, engineering practices and teams that can grow with the business.</p></article>
-    <article><span>02</span><h3>Modernize without disrupting delivery</h3><p>Practical technology transformation while protecting business continuity.</p></article>
-    <article><span>03</span><h3>Turn AI into production</h3><p>From promising experiments to governed, scalable AI capabilities.</p></article>
-  </div>
-</div>
- </div></div>
+</div></div>
  <div class="hero-photo"><img src="ramachandra-hero.jpg" alt="Ramachandra Raju S"><div class="grid-overlay"></div><div class="hero-label">Fractional CTO · Advisor</div><div class="hero-card"><strong>Enterprise Engineering Leadership</strong><span>Strategy · Architecture · Engineering · AI / GenAI</span></div></div>
 </section>
 <section class="metrics">
